@@ -210,6 +210,39 @@ declare module "@mui/material/styles" {
     accentHover: string
     accentPressed: string
     shadow: string
+    accentAlt: string
+    accentStrong: string
+    accentOnFill: string
+    borderOnAccent: string
+    borderSubtle: string
+    borderDisabled: string
+    dividerOnAccent: string
+    separator: string
+    surfaceSubtle: string
+    surfaceHighlight: string
+    textStrong: string
+    textSubtle: string
+    textLabel: string
+    textOnAccentHover: string
+    shadowSoft: string
+    cardShadow: string
+    skeleton: string
+    skeletonSoft: string
+    imagePlaceholder: string
+    courseCyberSecurity: string
+    courseProgramming: string
+    courseCloud: string
+    courseAi: string
+    courseOther: string
+    moduleCyberSecurity: string
+    moduleProgramming: string
+    moduleCloud: string
+    moduleAi: string
+    moduleOther: string
+    tagOther: string
+    tagDifficulty: string
+    tagModule: string
+    tagLanguage: string
   }
   interface Palette {
     roles: ColorRoles

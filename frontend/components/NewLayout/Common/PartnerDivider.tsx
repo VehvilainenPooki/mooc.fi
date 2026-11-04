@@ -8,13 +8,13 @@ import CommonTranslations from "/translations/common"
 const PartnerDividerText = styled("span")(
   ({ theme }) => `
   ${fontSize(14)}
-  color: ${theme.palette.common.grayscale.mediumDark};
+  color: ${theme.vars.palette.roles.textSubtle};
   text-transform: uppercase;
   display: block;
   text-align: center;
 
   margin: 0 auto;
-  background-color: ${theme.palette.common.grayscale.white};
+  background-color: ${theme.vars.palette.background.paper};
   padding: 0 0.5rem;
   z-index: 10;
   left: 50%;
@@ -34,7 +34,7 @@ const PartnerDividerWrapper = styled("section")(
     position: absolute;
     left: 0;
     right: 0;
-    background-color: ${theme.palette.common.grayscale.mediumDark};
+    background-color: ${theme.vars.palette.roles.separator};
     z-index: 1;
   }
 `,

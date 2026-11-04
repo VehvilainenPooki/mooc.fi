@@ -61,240 +61,240 @@ const EnhancedMUIButton = styled(ButtonBase)(
     }
 
     &.dark-blue-background {
-      background-color: ${theme.palette.common.brand.dark};
-      border: 4px solid ${theme.palette.common.grayscale.white};
-      color: ${theme.palette.common.grayscale.white};
+      background-color: ${theme.vars.palette.roles.accentStrong};
+      border: 4px solid ${theme.vars.palette.roles.borderOnAccent};
+      color: ${theme.vars.palette.roles.textOnAccent};
 
       .link-icon svg {
-        background-color: ${theme.palette.common.brand.dark};
-        fill: ${theme.palette.common.grayscale.white};
+        background-color: ${theme.vars.palette.roles.accentStrong};
+        fill: ${theme.vars.palette.roles.textOnAccent};
       }
 
       .text {
-        color: ${theme.palette.common.grayscale.white};
+        color: ${theme.vars.palette.roles.textOnAccent};
       }
     }
 
     &.transparent-background {
-      background-color: ${theme.palette.common.grayscale.white};
-      border: 4px solid ${theme.palette.common.grayscale.black};
-      color: ${theme.palette.common.grayscale.black};
+      background-color: ${theme.vars.palette.background.paper};
+      border: 4px solid ${theme.vars.palette.roles.borderStrong};
+      color: ${theme.vars.palette.roles.text};
 
       .link-icon svg {
-        background-color: ${theme.palette.common.grayscale.white};
-        fill: ${theme.palette.common.grayscale.black};
+        background-color: ${theme.vars.palette.background.paper};
+        fill: ${theme.vars.palette.roles.text};
       }
 
       .text {
-        color: ${theme.palette.common.grayscale.black};
+        color: ${theme.vars.palette.roles.text};
       }
     }
 
     &.black-background {
-      background-color: ${theme.palette.common.grayscale.black};
-      border: 4px solid ${theme.palette.common.grayscale.white};
-      color: ${theme.palette.common.grayscale.white};
+      background-color: ${theme.vars.palette.roles.surfaceInverse};
+      border: 4px solid ${theme.vars.palette.roles.borderOnInverse};
+      color: ${theme.vars.palette.roles.textOnInverse};
 
       .link-icon svg {
-        background-color: ${theme.palette.common.grayscale.black};
-        fill: ${theme.palette.common.grayscale.white};
+        background-color: ${theme.vars.palette.roles.surfaceInverse};
+        fill: ${theme.vars.palette.roles.textOnInverse};
       }
 
       .text {
-        color: ${theme.palette.common.grayscale.white};
+        color: ${theme.vars.palette.roles.textOnInverse};
       }
 
       &:hover {
-        background-color: ${theme.palette.common.brand.active};
+        background-color: ${theme.vars.palette.roles.accentHover};
 
         .link-icon svg {
-          background-color: ${theme.palette.common.brand.active};
+          background-color: ${theme.vars.palette.roles.accentHover};
         }
       }
 
       &:focus {
-        background-color: ${theme.palette.common.brand.main};
+        background-color: ${theme.vars.palette.roles.accent};
 
         .link-icon svg {
-          background-color: ${theme.palette.common.brand.main};
+          background-color: ${theme.vars.palette.roles.accent};
         }
       }
     }
 
     &.blue-background {
-      background-color: ${theme.palette.common.brand.light};
-      border: 4px solid ${theme.palette.common.grayscale.white};
-      color: ${theme.palette.common.grayscale.white};
+      background-color: ${theme.vars.palette.roles.accentAlt};
+      border: 4px solid ${theme.vars.palette.roles.borderOnAccent};
+      color: ${theme.vars.palette.roles.textOnAccent};
 
       .link-icon svg {
-        background-color: ${theme.palette.common.brand.light};
-        fill: ${theme.palette.common.grayscale.white};
+        background-color: ${theme.vars.palette.roles.accentAlt};
+        fill: ${theme.vars.palette.roles.textOnAccent};
       }
 
       .text {
-        color: ${theme.palette.common.grayscale.white};
+        color: ${theme.vars.palette.roles.textOnAccent};
       }
 
       &:hover {
-        background-color: ${theme.palette.common.brand.main};
+        background-color: ${theme.vars.palette.roles.accent};
 
         .link-icon svg {
-          background-color: ${theme.palette.common.brand.main};
+          background-color: ${theme.vars.palette.roles.accent};
         }
       }
 
       &:focus {
-        background-color: ${theme.palette.common.brand.active};
+        background-color: ${theme.vars.palette.roles.accentHover};
 
         .link-icon svg {
-          background-color: ${theme.palette.common.brand.active};
+          background-color: ${theme.vars.palette.roles.accentHover};
         }
       }
     }
 
     &.white-background {
-      background-color: ${theme.palette.common.grayscale.white};
-      border: 4px solid ${theme.palette.common.brand.light};
-      color: ${theme.palette.common.brand.light};
+      background-color: ${theme.vars.palette.background.paper};
+      border: 4px solid ${theme.vars.palette.roles.accentAlt};
+      color: ${theme.vars.palette.roles.accentAlt};
 
       .link-icon svg {
-        background-color: ${theme.palette.common.grayscale.white};
-        fill: ${theme.palette.common.brand.light};
+        background-color: ${theme.vars.palette.background.paper};
+        fill: ${theme.vars.palette.roles.accentAlt};
       }
 
       .text {
-        color: ${theme.palette.common.brand.light};
+        color: ${theme.vars.palette.roles.accentAlt};
       }
 
       &:hover {
-        border-color: ${theme.palette.common.brand.active};
+        border-color: ${theme.vars.palette.roles.accentHover};
 
         .text {
-          color: ${theme.palette.common.brand.active};
+          color: ${theme.vars.palette.roles.accentHover};
         }
 
         .link-icon svg {
-          fill: ${theme.palette.common.brand.active};
+          fill: ${theme.vars.palette.roles.accentHover};
         }
       }
 
       &:focus {
-        border-color: ${theme.palette.common.brand.active};
+        border-color: ${theme.vars.palette.roles.accentHover};
 
         .text {
-          color: ${theme.palette.common.brand.active};
+          color: ${theme.vars.palette.roles.accentHover};
         }
 
         .link-icon svg {
-          fill: ${theme.palette.common.brand.active};
+          fill: ${theme.vars.palette.roles.accentHover};
         }
       }
     }
 
     &.hero-white {
-      background-color: ${theme.palette.common.brand.light};
-      color: ${theme.palette.common.grayscale.white};
+      background-color: ${theme.vars.palette.roles.accentAlt};
+      color: ${theme.vars.palette.roles.textOnAccent};
 
       .link-icon svg {
-        background-color: ${theme.palette.common.brand.light};
-        fill: ${theme.palette.common.grayscale.white};
+        background-color: ${theme.vars.palette.roles.accentAlt};
+        fill: ${theme.vars.palette.roles.textOnAccent};
       }
 
       .text {
-        color: ${theme.palette.common.grayscale.white};
+        color: ${theme.vars.palette.roles.textOnAccent};
       }
 
       &:hover {
-        background-color: ${theme.palette.common.brand.active};
+        background-color: ${theme.vars.palette.roles.accentHover};
 
         .link-icon svg {
-          background-color: ${theme.palette.common.brand.active};
+          background-color: ${theme.vars.palette.roles.accentHover};
         }
       }
 
       &:focus {
-        background-color: ${theme.palette.common.brand.active};
+        background-color: ${theme.vars.palette.roles.accentHover};
 
         .link-icon svg {
-          background-color: ${theme.palette.common.brand.active};
+          background-color: ${theme.vars.palette.roles.accentHover};
         }
       }
     }
 
     &.hero-black {
-      background-color: ${theme.palette.common.grayscale.black};
-      border: 4px solid ${theme.palette.common.grayscale.white};
-      color: ${theme.palette.common.grayscale.white};
+      background-color: ${theme.vars.palette.roles.surfaceInverse};
+      border: 4px solid ${theme.vars.palette.roles.borderOnInverse};
+      color: ${theme.vars.palette.roles.textOnInverse};
 
       .link-icon svg {
-        background-color: ${theme.palette.common.grayscale.black};
-        fill: ${theme.palette.common.grayscale.white};
+        background-color: ${theme.vars.palette.roles.surfaceInverse};
+        fill: ${theme.vars.palette.roles.textOnInverse};
       }
 
       .text {
-        color: ${theme.palette.common.grayscale.white};
+        color: ${theme.vars.palette.roles.textOnInverse};
       }
 
       &:hover {
-        border-color: ${theme.palette.common.brand.soft};
+        border-color: ${theme.vars.palette.roles.accentOnFill};
 
         .text {
-          color: ${theme.palette.common.brand.soft};
+          color: ${theme.vars.palette.roles.accentOnFill};
         }
 
         .link-icon svg {
-          fill: ${theme.palette.common.brand.soft};
+          fill: ${theme.vars.palette.roles.accentOnFill};
         }
       }
 
       &:focus {
-        border-color: ${theme.palette.common.brand.soft};
+        border-color: ${theme.vars.palette.roles.accentOnFill};
 
         .text {
-          color: ${theme.palette.common.brand.soft};
+          color: ${theme.vars.palette.roles.accentOnFill};
         }
 
         .link-icon svg {
-          fill: ${theme.palette.common.brand.soft};
+          fill: ${theme.vars.palette.roles.accentOnFill};
         }
       }
     }
 
     &.hero-blue {
-      background-color: ${theme.palette.common.brand.main};
-      border: 4px solid ${theme.palette.common.grayscale.white};
-      color: ${theme.palette.common.grayscale.white};
+      background-color: ${theme.vars.palette.roles.accent};
+      border: 4px solid ${theme.vars.palette.roles.borderOnAccent};
+      color: ${theme.vars.palette.roles.textOnAccent};
 
       .link-icon svg {
-        background-color: ${theme.palette.common.brand.main};
-        fill: ${theme.palette.common.grayscale.white};
+        background-color: ${theme.vars.palette.roles.accent};
+        fill: ${theme.vars.palette.roles.textOnAccent};
       }
 
       .text {
-        color: ${theme.palette.common.grayscale.white};
+        color: ${theme.vars.palette.roles.textOnAccent};
       }
 
       &:hover {
-        border-color: ${theme.palette.common.brand.soft};
+        border-color: ${theme.vars.palette.roles.accentOnFill};
 
         .text {
-          color: ${theme.palette.common.brand.soft};
+          color: ${theme.vars.palette.roles.accentOnFill};
         }
 
         .link-icon svg {
-          fill: ${theme.palette.common.brand.soft};
+          fill: ${theme.vars.palette.roles.accentOnFill};
         }
       }
 
       &:focus {
-        border-color: ${theme.palette.common.brand.soft};
+        border-color: ${theme.vars.palette.roles.accentOnFill};
 
         .text {
-          color: ${theme.palette.common.brand.soft};
+          color: ${theme.vars.palette.roles.accentOnFill};
         }
 
         .link-icon svg {
-          fill: ${theme.palette.common.brand.soft};
+          fill: ${theme.vars.palette.roles.accentOnFill};
         }
       }
     }

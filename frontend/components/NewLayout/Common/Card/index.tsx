@@ -3,17 +3,20 @@ import Image from "next/image"
 import { Typography, TypographyProps } from "@mui/material"
 import { css, styled } from "@mui/material/styles"
 
-export const CardWrapper = styled("div")`
+export const CardWrapper = styled("div")(
+  ({ theme }) => `
   border-radius: 4px;
   box-sizing: border-box;
-  box-shadow: 3px 3px 4px rgba(88, 89, 91, 0.25);
-  border-left: 1px solid rgba(88, 89, 91, 0.25);
+  box-shadow: 3px 3px 4px ${theme.vars.palette.roles.cardShadow};
+  border-left: 1px solid ${theme.vars.palette.roles.cardShadow};
   min-height: 300px;
   display: flex;
   flex-direction: column;
-`
+`,
+)
 
-export const CardHeader = styled("div")`
+export const CardHeader = styled("div")(
+  ({ theme }) => `
   height: 120px;
   min-height: 120px;
   position: relative;
@@ -21,9 +24,10 @@ export const CardHeader = styled("div")`
   flex-direction: column;
   justify-content: center;
   padding: 2rem 1rem;
-  background-color: #fefefe;
+  background-color: ${theme.vars.palette.roles.surfaceSubtle};
   z-index: -2;
-`
+`,
+)
 
 export const CardHeaderImage = styled(Image)`
   opacity: 0.4;
@@ -40,13 +44,15 @@ export const CardHeaderImage = styled(Image)`
 //  "aria-hidden": true,
 //}
 
-export const CardBody = styled("div")`
-  background-color: #fff;
+export const CardBody = styled("div")(
+  ({ theme }) => `
+  background-color: ${theme.vars.palette.background.paper};
   display: flex;
   flex-direction: column;
   padding: 1rem;
   height: 100%;
-`
+`,
+)
 
 export const CardDescription = styled("p")`
   height: 100%;
@@ -94,6 +100,7 @@ export const CardHeaderBackground = styled("span", {
     }
     let style = `background-image: `
     if (color) {
+      // fade from a fully transparent stop, not a theme color
       style += `linear-gradient(to left, rgba(255, 0, 0, 0), ${color} 55%)`
     }
     if (image) {
@@ -119,7 +126,8 @@ export const CardImageHeaderBackground = styled(Image, {
   object-fit: cover;
   ${({ color }) =>
     color
-      ? `background-image: linear-gradient(to left, rgba(255, 0, 0, 0), ${color} 55%)`
+      ? // fade from a fully transparent stop, not a theme color
+        `background-image: linear-gradient(to left, rgba(255, 0, 0, 0), ${color} 55%)`
       : ""}
 `
 
@@ -127,7 +135,9 @@ CardImageHeaderBackground.defaultProps = {
   "aria-hidden": true,
 }
 
-export const CardHeaderBackgroundSkeleton = styled("span")`
+export const CardHeaderBackgroundSkeleton = styled("span")(
+  ({ theme }) => `
   ${CommonHeaderBackground.styles};
-  background-color: #aaa;
-`
+  background-color: ${theme.vars.palette.roles.skeleton};
+`,
+)

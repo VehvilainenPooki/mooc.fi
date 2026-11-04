@@ -77,10 +77,10 @@ const IntroductionLink = styled(Link)(
   ({ theme }) => `
   ${fontSize(16, 20)}
   letter-spacing: -0.5px;
-  background-color: ${theme.palette.common.brand.light};
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: ${theme.vars.palette.roles.accentAlt};
+  box-shadow: 0 2px 8px 0 ${theme.vars.palette.roles.shadowSoft};
   box-sizing: border-box;
-  color: ${theme.palette.common.grayscale.white};
+  color: ${theme.vars.palette.roles.textOnAccent};
   cursor: pointer;
   display: inline-block;
   font-weight: 700;
@@ -110,7 +110,7 @@ const IntroductionLink = styled(Link)(
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
-    fill: ${theme.palette.common.grayscale.white};
+    fill: ${theme.vars.palette.roles.textOnAccent};
   }
 `,
 ) as EnhancedLink
@@ -175,7 +175,7 @@ const IntroductionDescription = styled("p")(
   ({ theme }) => `
   ${fontSize(15, 22)}
   font-weight: 200;
-  color: ${theme.palette.common.grayscale.black};
+  color: ${theme.vars.palette.roles.text};
   margin-bottom: 24px;
   margin-top: 0;
 

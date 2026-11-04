@@ -37,16 +37,16 @@ const TagChip = styled(Chip, {
   border-style: solid;
   text-transform: uppercase;
 
-  border-color: ${theme.palette.primary.main};
+  border-color: ${theme.vars.palette.primary.main};
   color: ${
     variant === "filled"
-      ? theme.palette.primary.contrastText
-      : theme.palette.primary.main
+      ? theme.vars.palette.primary.contrastText
+      : theme.vars.palette.primary.main
   };
   background-color: ${
     variant === "filled"
-      ? theme.palette.primary.main
-      : theme.palette.background.default
+      ? theme.vars.palette.primary.main
+      : theme.vars.palette.background.default
   };
 
   transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
@@ -60,8 +60,8 @@ const TagChip = styled(Chip, {
     margin: 0.05rem 0.2rem;
     border-width: 0.1rem;
     border-style: solid;
-    background-color: ${theme.palette.primary.light};
-    color: ${theme.palette.primary.contrastText};
+    background-color: ${theme.vars.palette.primary.light};
+    color: ${theme.vars.palette.primary.contrastText};
   }
 `,
 )
@@ -126,19 +126,19 @@ const SelectAllButton = styled(Button)(
   white-space: nowrap;
   font-weight: 700 !important;
   background-color: transparent !important;
-  color: ${theme.palette.common.brand.main} !important;
-  border: 2px solid ${theme.palette.common.brand.main} !important;
+  color: ${theme.vars.palette.roles.accent} !important;
+  border: 2px solid ${theme.vars.palette.roles.accent} !important;
   &:hover {
-    color: ${theme.palette.common.brand.active} !important;
-    border: 2px solid ${theme.palette.common.brand.active} !important;
+    color: ${theme.vars.palette.roles.accentHover} !important;
+    border: 2px solid ${theme.vars.palette.roles.accentHover} !important;
   }
   &[aria-selected="true"] {
-    background-color: ${theme.palette.common.brand.main} !important;
-    color: ${theme.palette.common.grayscale.white} !important;
+    background-color: ${theme.vars.palette.roles.accent} !important;
+    color: ${theme.vars.palette.roles.textOnAccent} !important;
     border: 2px solid transparent;
     &:hover {
-      background-color: ${theme.palette.common.brand.active} !important;
-      color: ${theme.palette.common.grayscale.white} !important;
+      background-color: ${theme.vars.palette.roles.accentHover} !important;
+      color: ${theme.vars.palette.roles.textOnAccent} !important;
       border: 2px solid transparent;
     }
   }

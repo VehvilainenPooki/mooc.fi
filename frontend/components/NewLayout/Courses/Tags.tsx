@@ -4,7 +4,7 @@ import { PropsOf } from "@emotion/react"
 // import CircleIcon from "@mui/icons-material/Circle"
 // import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined"
 import { Chip } from "@mui/material"
-import { styled } from "@mui/material/styles"
+import { styled, useTheme } from "@mui/material/styles"
 
 import {
   allowedLanguages,
@@ -22,7 +22,7 @@ import { isDefinedAndNotEmpty } from "/util/guards"
 const Tag = styled(Chip)(
   ({ theme }) => `
   display: inline-block;
-  color: ${theme.palette.common.grayscale.white} !important;
+  color: ${theme.vars.palette.roles.textOnAccent} !important;
   ${fontSize(12, 14)}
   padding: 4px 6px;
   font-weight: 700;
@@ -56,6 +56,7 @@ export const LanguageTag = ({
   ...props
 }: PropsOf<typeof Tag> & { otherLanguages?: Array<CourseTagFields> }) => {
   const t = useTranslator(CommonTranslations)
+  const theme = useTheme()
 
   if (!otherLanguages) {
     return <LanguageTagBase {...props} />
@@ -77,8 +78,8 @@ export const LanguageTag = ({
               .join(", ")}
             outlined={false}
             IconProps={{
-              hoverColor: "#eee",
-              iconColor: "white",
+              hoverColor: theme.vars.palette.roles.textOnAccentHover,
+              iconColor: theme.vars.palette.roles.textOnAccent,
               fontSize: "small",
             }}
           />

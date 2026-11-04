@@ -43,9 +43,11 @@ const InfoRowContainer = styled("div")(
 `,
 )
 
-const InfoRowTitle = styled(Typography)`
-  color: #666;
-` as typeof Typography
+const InfoRowTitle = styled(Typography)(
+  ({ theme }) => `
+  color: ${theme.vars.palette.roles.textLabel};
+`,
+) as typeof Typography
 
 const InfoRowContent = styled(Typography)`
   font-weight: 600;

@@ -65,7 +65,7 @@ const CardContainer = styled("article")(
   ({ theme }) => `
   display: flex;
   flex-direction: column;
-  background-color: ${theme.palette.common.grayscale.backgroundBox};
+  background-color: ${theme.vars.palette.roles.surfaceSunken};
   height: 100%;
   ${theme.breakpoints.up(768)} {
     flex-direction: row;
@@ -128,7 +128,7 @@ const Title = styled(Typography)(
     ${fontSize(22, 32)}
     font-weight: 700;
     letter-spacing: -0.44px;
-    color: ${theme.palette.common.brand.main};
+    color: ${theme.vars.palette.roles.accent};
     margin-bottom: 0.5rem !important;
     margin-top: 0 !important;
     padding: 0;
@@ -143,11 +143,11 @@ const Title = styled(Typography)(
 
   a {
     text-decoration: none;
-    color: ${theme.palette.common.brand.main};
+    color: ${theme.vars.palette.roles.accent};
 
     &:hover {
       text-decoration: underline;
-      color: ${theme.palette.common.brand.active};
+      color: ${theme.vars.palette.roles.accentHover};
     }
   }
 `,
@@ -182,7 +182,7 @@ const CourseDetails = styled("div")(
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   padding-right: 0.5rem;
-  color: ${theme.palette.common.brand.nearlyBlack};
+  color: ${theme.vars.palette.roles.textStrong};
 
   ${theme.breakpoints.between(768, "lg")} {
     margin-bottom: 0.5rem;
@@ -199,7 +199,7 @@ const CourseDetailItemContainer = styled("div")(
   ({ theme }) => `
   display: flex;
   align-items: center;
-  color: ${theme.palette.common.brand.nearlyBlack};
+  color: ${theme.vars.palette.roles.textStrong};
   margin-bottom: 0.25rem;
   margin-right: 2rem;
 `,
@@ -282,9 +282,14 @@ const iconStyle = css`
   margin-right: 0.5rem;
 `
 
-const Flipchart = styled(FlipchartIcon)`
+const Flipchart = styled(FlipchartIcon)(
+  ({ theme }) => `
   ${iconStyle.styles}
-`
+  path {
+    stroke: ${theme.vars.palette.roles.text};
+  }
+`,
+)
 
 const GraduationCap = styled(GraduationCapIcon)`
   ${iconStyle.styles}

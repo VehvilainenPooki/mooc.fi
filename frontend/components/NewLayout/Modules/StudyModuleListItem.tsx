@@ -54,7 +54,8 @@ const ModuleSectionRoot = styled(CardWrapper, {
   margin-bottom: 3rem;
   position: relative;
   z-index: 0;
-  background-color: #fefefe;
+  background-color: ${theme.vars.palette.roles.surfaceSubtle};
+  /* the gradients fade from a fully transparent stop, not a theme color */
   background-image: linear-gradient(to left, rgba(255,0,0,0), ${backgroundColor} 55%);
 
   ${theme.breakpoints.down("lg")} {
@@ -95,13 +96,15 @@ const ModuleSectionBody = styled("ul")`
   width: 100%;
 `
 
-const ModuleSectionDescription = styled("div")`
+const ModuleSectionDescription = styled("div")(
+  ({ theme }) => `
   padding: 1rem;
   display: flex;
   margin: 0;
   flex-direction: column;
-  color: #fff;
-`
+  color: ${theme.vars.palette.roles.textOnAccent};
+`,
+)
 
 const ModuleSectionDescriptionText = styled(Typography)`
   font-family: var(--body-font) !important;
@@ -119,15 +122,17 @@ const ImageBackgroundBase = css`
   z-index: -5;
 `
 
-const SkeletonBackground = styled("span")`
+const SkeletonBackground = styled("span")(
+  ({ theme }) => `
   ${ImageBackgroundBase.styles};
-  background-color: #eee;
-`
+  background-color: ${theme.vars.palette.roles.skeletonSoft};
+`,
+)
 
 const CenteredHeader = styled(Typography)(
   ({ theme }) => `
   margin-bottom: 2rem;
-  color: ${theme.palette.common.grayscale.white}
+  color: ${theme.vars.palette.roles.textOnAccent}
 `,
 ) as typeof Typography
 
@@ -139,10 +144,12 @@ const EndedCoursesLinkContainer = styled("div")`
   justify-content: flex-end;
 `
 
-const StyledCTALink = styled(CTALink)`
-  background: #fff;
+const StyledCTALink = styled(CTALink)(
+  ({ theme }) => `
+  background: ${theme.vars.palette.background.paper};
   padding-left: 1rem;
-`
+`,
+)
 
 const getCoursesByStatus = (courses: StudyModuleListItemFields["courses"]) => {
   const filteredCourses = courses?.filter((course) => course.description) ?? []
