@@ -20,6 +20,7 @@ import { useTranslator } from "/hooks/useTranslator"
 import ProfileTranslations from "/translations/profile"
 
 import { UserCourseSummaryCourseFieldsFragment } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 const Container = styled("div")(
   ({ theme }) => `
@@ -49,7 +50,7 @@ const CourseSelectListItemTextNested = styled("span")`
     left: 0.5rem;
     width: calc(1.5rem + 2px);
     height: calc(1.5rem - 8px);
-    border: solid #ddd;
+    border: solid ${cssRole("listDivider")};
     border-width: 0 0 2px 2px;
   }
 
@@ -62,7 +63,7 @@ const CourseSelectListItemTextNested = styled("span")`
     left: 0.5rem;
     width: calc(1.5rem + 2px);
     height: 2.5rem;
-    border-left: solid 2px #ddd;
+    border-left: solid 2px ${cssRole("listDivider")};
   }
   &:first-of-type:after {
     top: calc((1.5rem / -2) + 0.5rem);

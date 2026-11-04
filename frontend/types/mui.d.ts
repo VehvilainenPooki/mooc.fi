@@ -307,6 +307,18 @@ declare module "@mui/material/styles" {
     overlayButtonDanger: string
     overlayShadow: string
     overlayShadowInset: string
+    surfaceHidden: string
+    surfaceMuted: string
+    borderLight: string
+    listDivider: string
+    tableBorder: string
+    iconAccent: string
+    statusActive: string
+    statusUpcoming: string
+    statusEnded: string
+    progressTrack: string
+    progressFill: string
+    progressFillSecondary: string
   }
   interface Palette {
     roles: ColorRoles

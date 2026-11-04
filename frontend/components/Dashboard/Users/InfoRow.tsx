@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles"
 
 import ClipboardButton from "/components/ClipboardButton"
 import { useClipboard } from "/hooks/useClipboard"
+import { cssRole } from "/src/newTheme/roles"
 
 type InfoRowProps = {
   title: string
@@ -31,7 +32,7 @@ export const InfoRowContainer = styled("div", {
   }
 */
 const InfoRowTitle = styled(Typography)`
-  color: #666;
+  color: ${cssRole("textLabel")};
   font-weight: 600;
   padding-right: 0.5rem;
 `

@@ -13,6 +13,7 @@ import { useTranslator } from "/hooks/useTranslator"
 import UsersTranslations from "/translations/users"
 
 import { UserSearchField } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 const OptionFormControl = styled(FormControl)`
   max-width: 50%;
@@ -21,7 +22,7 @@ const OptionFormControl = styled(FormControl)`
 const OptionFormGroup = styled(FormGroup)`
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid rgba(0, 0, 0, 0.23);
+  border: 1px solid ${cssRole("inputBorder")};
   padding: 0.5rem;
   border-radius: 4px;
 

@@ -37,6 +37,7 @@ import ProfileTranslations from "/translations/profile"
 import { formatDateTime } from "/util/dataFormatFunctions"
 
 import { ExerciseWithExerciseCompletionsFieldsFragment } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 const mapExerciseToRow =
   (locale?: string) =>
@@ -244,7 +245,7 @@ function ExerciseList({ data, loading }: ExerciseListProps) {
       ...tableProps["muiTableBodyRowProps"],
       sx: {
         ...(tableProps["muiTableBodyRowProps"] as TableRowProps)?.sx,
-        ...(row.original.max_points === 0 ? { backgroundColor: "#eee" } : {}),
+        ...(row.original.max_points === 0 ? { backgroundColor: cssRole("surfaceMuted") } : {}),
       },
     }),
     [tableProps],

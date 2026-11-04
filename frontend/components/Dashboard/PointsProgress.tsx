@@ -18,6 +18,7 @@ import { useTranslator } from "/hooks/useTranslator"
 import CommonTranslations from "/translations/common"
 import { isDefinedAndNotEmpty } from "/util/guards"
 import round from "/util/round"
+import { cssRole } from "/src/newTheme/roles"
 
 const ProgressItem = styled("div")`
   width: 100%;
@@ -31,7 +32,7 @@ const ProgressItem = styled("div")`
 const ProgressBar = styled("div")`
   width: 100%;
   height: 1rem;
-  background-color: #f5f5f5;
+  background-color: ${cssRole("progressTrack")};
   position: relative;
 `
 
@@ -46,7 +47,7 @@ const Progress = styled("div", {
   position: absolute;
   height: 100%;
   width: ${(props) => props.percentage}%;
-  background: ${(props) => props.color ?? "#3066c0"};
+  background: ${(props) => props.color ?? cssRole("progressFill")};
 `
 
 type ProgressLegendProps = {
@@ -66,7 +67,7 @@ const Marker = styled("div", {
   height: 2.5rem;
   top: -2.5rem;
   border-radius: 0.125rem;
-  background-color: ${(props) => props.color ?? "#3066c0"};
+  background-color: ${(props) => props.color ?? cssRole("progressFill")};
   left: calc(${(props) => props.percentage}% - 0.0625rem);
 `
 

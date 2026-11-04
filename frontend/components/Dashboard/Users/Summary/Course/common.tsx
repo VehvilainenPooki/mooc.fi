@@ -25,6 +25,7 @@ import { useTranslator } from "/hooks/useTranslator"
 import ProfileTranslations from "/translations/profile"
 
 import { UserCourseSummaryCourseFieldsFragment } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 export const CourseEntriesContainer = styled("div")`
   display: flex;
@@ -54,7 +55,7 @@ export const CourseInfo = styled("div")`
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  background-color: #eee;
+  background-color: ${cssRole("surfaceMuted")};
 `
 
 const SkeletonStyledPaper = styled(Paper)`

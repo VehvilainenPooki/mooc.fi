@@ -29,6 +29,7 @@ import UserSearchContext from "/contexts/UserSearchContext"
 import { useTranslator } from "/hooks/useTranslator"
 import UsersTranslations from "/translations/users"
 import { isDefinedAndNotEmpty } from "/util/guards"
+import { cssRole } from "/src/newTheme/roles"
 
 const MobileGrid = dynamic(() => import("./MobileGrid"), {
   ssr: false,
@@ -61,7 +62,7 @@ const OptionCollapse = styled(Collapse)`
   }
 `
 const StyledButton = styled(ButtonWithPaddingAndMargin)`
-  color: white;
+  color: ${cssRole("textOnAccent")};
   margin-top: 16px;
   max-height: 3.5rem;
 `

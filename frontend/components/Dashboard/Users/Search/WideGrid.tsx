@@ -21,14 +21,15 @@ import UserSearchContext from "/contexts/UserSearchContext"
 import useIsOld from "/hooks/useIsOld"
 import { useTranslator } from "/hooks/useTranslator"
 import UsersTranslations from "/translations/users"
+import { cssRole } from "/src/newTheme/roles"
 
 const TableWrapper = styled("div")`
   overflow-x: auto;
 `
 
 const StyledTableCell = styled(TableCell)`
-  background-color: black;
-  color: white;
+  background-color: ${cssRole("surfaceInverse")};
+  color: ${cssRole("textOnInverse")};
 `
 
 const StyledPaper = styled(Paper)`

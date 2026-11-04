@@ -18,9 +18,10 @@ import {
   UserCourseProgressCoreFieldsFragment,
   UserCourseServiceProgressCoreFieldsFragment,
 } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 const PointsListItemCardContainer = styled(Grid)`
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
   width: 100%;
   padding: 1rem;
 `

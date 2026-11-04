@@ -20,6 +20,7 @@ import { useTranslator } from "/hooks/useTranslator"
 import StudyModulesTranslations from "/translations/study-modules"
 
 import { StudyModuleDetailedFieldsFragment } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 const Base = styled(ClickableDiv)`
   width: 100%;
@@ -63,7 +64,7 @@ const ImageCover = styled("span")`
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
   opacity: 0.9;
   width: 70%;
 `
@@ -101,7 +102,7 @@ const NaviCardTitle = styled(Typography)<TypographyProps & BoxProps>`
 `
 
 const AddCourseIcon = styled(AddCircleIcon)`
-  color: rgba(100, 100, 255);
+  color: ${cssRole("iconAccent")};
   width: 100%;
   height: 100%;
 `

@@ -12,17 +12,18 @@ import { KeyOfTranslationDictionary } from "/translations"
 import CoursesTranslations from "/translations/courses"
 
 import { CourseStatus } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 const statusColor: Record<CourseStatus & string, string> = {
-  [CourseStatus.Active]: "#378170",
-  [CourseStatus.Upcoming]: "#ffcd38",
-  [CourseStatus.Ended]: "#f44336",
+  [CourseStatus.Active]: cssRole("statusActive"),
+  [CourseStatus.Upcoming]: cssRole("statusUpcoming"),
+  [CourseStatus.Ended]: cssRole("statusEnded"),
 }
 const StatusBadge = styled(Chip)<{ status?: CourseStatus | null }>`
   background-color: ${({ status }) =>
     statusColor[status as CourseStatus] ?? "default"};
   color: ${({ status }) =>
-    status === CourseStatus.Active ? "white" : "default"};
+    status === CourseStatus.Active ? cssRole("textOnAccent") : "default"};
   width: 100px;
 `
 
