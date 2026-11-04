@@ -2,14 +2,16 @@ import { EnhancedButton } from "@mui/material"
 import Button from "@mui/material/Button"
 import { styled } from "@mui/material/styles"
 
+import { getRoles } from "/src/newTheme/roles"
+
 export const ButtonWithPaddingAndMargin = styled(Button)`
   margin: 0.5rem;
-  color: ${({ color }) =>
+  color: ${({ theme, color }) =>
     color === "secondary"
-      ? "#4e4637"
+      ? getRoles(theme).buttonSecondaryText
       : color === "primary"
-      ? "#FFFFFF"
-      : color ?? "#000000"};
+      ? getRoles(theme).textOnAccent
+      : color ?? getRoles(theme).text};
   font-size: 18px;
   padding: 0.5em;
 ` as EnhancedButton

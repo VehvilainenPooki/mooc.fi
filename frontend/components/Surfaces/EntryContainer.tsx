@@ -1,7 +1,11 @@
 import { Paper } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
-export const EntryContainer = styled(Paper)`
-  border-left: 2px solid #a0a0ff;
+import { getRoles } from "/src/newTheme/roles"
+
+export const EntryContainer = styled(Paper)(
+  ({ theme }) => `
+  border-left: 2px solid ${getRoles(theme).entryBorder};
   padding: 20px;
-`
+`,
+)

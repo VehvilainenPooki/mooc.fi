@@ -24,13 +24,15 @@ import { isDefinedAndNotEmpty } from "/util/guards"
 
 import { CourseStatus } from "/graphql/generated"
 
-const Container = styled("div")`
-  background-color: white;
+const Container = styled("div")(
+  ({ theme }) => `
+  background-color: ${(theme.vars ?? theme).palette.background.paper};
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   min-width: 300px;
-`
+`,
+)
 
 const Row = styled("section")`
   display: grid;

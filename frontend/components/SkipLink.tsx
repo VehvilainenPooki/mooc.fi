@@ -1,10 +1,13 @@
 import { Typography } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
+import { getRoles } from "/src/newTheme/roles"
+
 import { useTranslator } from "/hooks/useTranslator"
 import CommonTranslations from "/translations/common"
 
-const SkipLinkContainer = styled("a")`
+const SkipLinkContainer = styled("a")(
+  ({ theme }) => `
   left: -999px;
   position: absolute;
   top: auto;
@@ -14,8 +17,8 @@ const SkipLinkContainer = styled("a")`
   z-index: -999;
 
   &:focus {
-    color: white;
-    background-color: black;
+    color: ${getRoles(theme).textOnInverse};
+    background-color: ${getRoles(theme).surfaceInverse};
     left: auto;
     top: auto;
     width: 30%;
@@ -30,8 +33,8 @@ const SkipLinkContainer = styled("a")`
   }
 
   &:active {
-    color: white;
-    background-color: black;
+    color: ${getRoles(theme).textOnInverse};
+    background-color: ${getRoles(theme).surfaceInverse};
     left: auto;
     top: auto;
     width: 30%;
@@ -44,7 +47,8 @@ const SkipLinkContainer = styled("a")`
     font-size: 1.2em;
     z-index: 999;
   }
-`
+`,
+)
 
 function SkipLink() {
   const t = useTranslator(CommonTranslations)

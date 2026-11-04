@@ -3,8 +3,11 @@ import React, { PropsWithChildren } from "react"
 import { PropsOf } from "@emotion/react"
 import { styled } from "@mui/material/styles"
 
-const BorderedSectionBase = styled("div")`
-  --border-color: #b2b2b2;
+import { getRoles } from "/src/newTheme/roles"
+
+const BorderedSectionBase = styled("div")(
+  ({ theme }) => `
+  --border-color: ${getRoles(theme).borderMuted};
 
   display: flex;
   flex-direction: column;
@@ -51,7 +54,8 @@ const BorderedSectionBase = styled("div")`
       border-top-right-radius: 5px;
     }
   }
-`
+`,
+)
 
 function BorderedSection({
   title,

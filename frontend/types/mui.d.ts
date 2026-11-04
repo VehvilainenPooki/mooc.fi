@@ -243,6 +243,28 @@ declare module "@mui/material/styles" {
     tagDifficulty: string
     tagModule: string
     tagLanguage: string
+    textSubtitle: string
+    textOnDanger: string
+    buttonSecondaryText: string
+    surfaceTranslucent: string
+    borderMuted: string
+    entryBorder: string
+    shadowRaised: string
+    shadowRaisedHover: string
+    tooltipSurface: string
+    tooltipBorder: string
+    tooltipIcon: string
+    tooltipIconHover: string
+    danger: string
+    successFill: string
+    warningFill: string
+    dangerFill: string
+    infoFill: string
+    infoFg: string
+    infoBg: string
+    infoBorder: string
+    infoText: string
+    codeSurface: string
   }
   interface Palette {
     roles: ColorRoles

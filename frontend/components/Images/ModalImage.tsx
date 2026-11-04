@@ -50,15 +50,17 @@ const MainImage = styled(Image)`
   }
 `
 
-const ModalContainer = styled(Box)`
+const ModalContainer = styled(Box)(
+  ({ theme }) => `
   padding: 2rem;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  background-color: white;
-`
+  background-color: ${(theme.vars ?? theme).palette.background.paper};
+`,
+)
 
 const StyledModal = styled(Modal)`
   display: flex;

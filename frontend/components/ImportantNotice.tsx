@@ -4,50 +4,59 @@ import { SvgIcon, Typography } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
 import { useTranslator } from "/hooks/useTranslator"
+import { getRoles } from "/src/newTheme/roles"
 import RegisterCompletionTranslations from "/translations/register-completion"
 
-const NoticeContainer = styled("div")`
+const NoticeContainer = styled("div")(
+  ({ theme }) => `
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 0.75rem;
   padding: 0.875rem 1rem;
-  border-left: 3px solid #46749b;
+  border-left: 3px solid ${getRoles(theme).infoBorder};
   border-radius: 0 6px 6px 0;
-  background-color: #fbfcfd;
-`
+  background-color: ${getRoles(theme).infoBg};
+`,
+)
 
-const NoticeIcon = styled(SvgIcon)`
+const NoticeIcon = styled(SvgIcon)(
+  ({ theme }) => `
   flex: none;
   width: 20px;
   height: 20px;
   margin-top: 0.15rem;
-  color: #46749b;
-`
+  color: ${getRoles(theme).infoFg};
+`,
+)
 
 const NoticeBody = styled("div")`
   flex: 1;
 `
 
-export const NoticeText = styled(Typography)`
+export const NoticeText = styled(Typography)(
+  ({ theme }) => `
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
-  color: #313947;
-` as typeof Typography
+  color: ${getRoles(theme).infoText};
+`,
+) as typeof Typography
 
-const EmailNoticeText = styled(NoticeText)`
+const EmailNoticeText = styled(NoticeText)(
+  ({ theme }) => `
   strong {
     padding: 0.1em 0.28em;
     border-radius: 4px;
-    background-color: #f5f6f7;
+    background-color: ${getRoles(theme).codeSurface};
     /* Monospace keeps O/0 and l/1 apart: students transcribe the address by hand. */
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.92em;
     font-weight: 700;
     overflow-wrap: anywhere;
   }
-` as typeof Typography
+`,
+) as typeof Typography
 
 export function Notice({ children }: PropsWithChildren) {
   return (

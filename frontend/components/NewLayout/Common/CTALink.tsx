@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles"
 
 import ArrowLeft from "../Icons/ArrowLeft"
 import ArrowRight from "../Icons/ArrowRight"
+import { getRoles } from "/src/newTheme/roles"
 import { fontSize } from "/src/theme/util"
 
 const ctaLinkVariants = ["link-list", "default"] as const
@@ -14,7 +15,7 @@ const Link = styled(MUILink)(
   ${fontSize(16, 24)}
   font-weight: 600;
   align-items: center;
-  color: ${theme.palette.common.brand.main};
+  color: ${getRoles(theme).accent};
   display: inline-grid;
   gap: 16px;
   grid-auto-flow: column;
@@ -26,7 +27,7 @@ const Link = styled(MUILink)(
     text-decoration: underline;
 
     ${CTALinkIcon} {
-      background-color: ${theme.palette.common.brand.main};
+      background-color: ${getRoles(theme).accent};
     }
   }
 `,
@@ -35,14 +36,14 @@ const Link = styled(MUILink)(
 export const CTALinkIcon = styled("span")(
   ({ theme }) => `
   align-items: center;
-  background-color: ${theme.palette.common.brand.light};
+  background-color: ${getRoles(theme).accentAlt};
   display: inline-flex;
   height: 40px;
   justify-content: center;
   width: 40px;
 
   svg {
-    fill: ${theme.palette.common.grayscale.white};
+    fill: ${getRoles(theme).textOnAccent};
   }
 `,
 )
