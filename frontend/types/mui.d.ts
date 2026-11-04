@@ -319,6 +319,9 @@ declare module "@mui/material/styles" {
     progressTrack: string
     progressFill: string
     progressFillSecondary: string
+    surfaceDisabled: string
+    textOnDisabled: string
+    appBarBorder: string
   }
   interface Palette {
     roles: ColorRoles
