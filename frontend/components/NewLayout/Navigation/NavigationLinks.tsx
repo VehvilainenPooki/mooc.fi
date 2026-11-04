@@ -9,18 +9,18 @@ import { fontSize } from "/src/theme/util"
 const NavigationLink = styled(Link)(
   ({ theme }) => `
   ${NavigationLinkStyle.styles}
-  color: ${theme.palette.common.brand.nearlyBlack};
+  color: ${theme.vars.palette.roles.navText};
   svg {
-    fill: ${theme.palette.common.brand.nearlyBlack};
+    fill: ${theme.vars.palette.roles.navText};
   }
   ${theme.breakpoints.up("xl")} {
     ${fontSize(16, 16)}
   }
   &:hover {
     cursor: pointer;
-    color: ${theme.palette.common.brand.main};
+    color: ${theme.vars.palette.roles.accent};
     svg {
-      fill: ${theme.palette.common.brand.main};
+      fill: ${theme.vars.palette.roles.accent};
     }
   }
 `,

@@ -31,19 +31,19 @@ const NavigationDropdownButton = styled(ButtonBase)(
   margin: 0;
   border-radius: 0;
   height: 100%;
-  color: ${theme.palette.common.brand.nearlyBlack};
+  color: ${theme.vars.palette.roles.navText};
   transition: none !important;
   svg {
-    fill: ${theme.palette.common.brand.nearlyBlack};
+    fill: ${theme.vars.palette.roles.navText};
   }
   ${theme.breakpoints.up("xl")} {
     ${fontSize(16, 16)}
   }
   &:hover {
     cursor: pointer;
-    color: ${theme.palette.common.brand.main};
+    color: ${theme.vars.palette.roles.accent};
     svg {
-      fill: ${theme.palette.common.brand.main};
+      fill: ${theme.vars.palette.roles.accent};
     }
     background-color: transparent;
   }
@@ -52,7 +52,7 @@ const NavigationDropdownButton = styled(ButtonBase)(
     position: relative;
     &::after,
     &::before {
-      background-color: ${theme.palette.common.grayscale.white};
+      background-color: ${theme.vars.palette.background.paper};
       content: "";
       height: 5px;
       width: 16px;
@@ -69,7 +69,7 @@ const NavigationDropdownButton = styled(ButtonBase)(
       right: -16px;
     }
 
-    box-shadow: inset 0 -4px 0 0 ${theme.palette.common.grayscale.black};
+    box-shadow: inset 0 -4px 0 0 ${theme.vars.palette.roles.borderStrong};
   }
 `,
 ) as EnhancedButtonBase
@@ -87,7 +87,7 @@ const NavigationDropdownMenu = styled(Popover)(
     width: max-content;
     max-width: 120rem;
     padding: 24px 16px 40px;
-    border: 1px solid ${theme.palette.common.grayscale.black};
+    border: 1px solid ${theme.vars.palette.roles.borderStrong};
     border-top: none;
     border-radius: 0;
     transition: none !important;
@@ -126,7 +126,7 @@ const NavigationDropdownMenuHeader = styled("div")(
   align-items: flex-start;
 
   svg {
-    fill: ${theme.palette.common.grayscale.white};
+    fill: ${theme.vars.palette.roles.textOnInverse};
   }
 `,
 )
@@ -153,7 +153,7 @@ const NavigationDropdownMenuItemLink = styled(Link)(
   ${fontSize(16, 24)}
   font-weight: 600;
   align-items: flex-start;
-  color: ${theme.palette.common.brand.main};
+  color: ${theme.vars.palette.roles.accent};
   display: inline-flex;
   letter-spacing: -0.5px;
   overflow: hidden;
@@ -166,7 +166,7 @@ const NavigationDropdownMenuItemLink = styled(Link)(
   svg {
     margin-right: 12px;
     margin-top: 8px;
-    fill: ${theme.palette.common.grayscale.black};
+    fill: ${theme.vars.palette.roles.text};
   }
 `,
 ) as EnhancedLink
@@ -187,7 +187,7 @@ const NavigationDropdownHeaderLink = styled(Link)`
 
 const NavigationIconWrapper = styled("div")(
   ({ theme }) => `
-  background-color: ${theme.palette.common.grayscale.black};
+  background-color: ${theme.vars.palette.roles.surfaceInverse};
   display: flex;
   grid-area: icon;
   height: 40px;
@@ -213,12 +213,12 @@ const NavigationDropdownShortcutContainer = styled("div")(
   ({ theme }) => `
   margin-left: 48px;
   padding-left: 48px;
-  border-left: 1px solid ${theme.palette.common.grayscale.medium};
+  border-left: 1px solid ${theme.vars.palette.roles.border};
 
   h2 {
     ${fontSize(18, 24)}
     font-weight: 700;
-    color: ${theme.palette.common.grayscale.black};
+    color: ${theme.vars.palette.roles.text};
     letter-spacing: -0.36px;
     margin: 0 0 24px;
   }

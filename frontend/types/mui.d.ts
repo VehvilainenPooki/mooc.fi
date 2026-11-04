@@ -187,7 +187,10 @@ declare module "@mui/material/styles" {
   interface ColorRoles {
     surfaceRaised: string
     surfaceSunken: string
+    surfaceHover: string
     surfaceInverse: string
+    surfaceInverseHover: string
+    surfaceInverseBorder: string
     text: string
     textHeading: string
     textMuted: string
@@ -197,12 +200,16 @@ declare module "@mui/material/styles" {
     textOnInverseMuted: string
     border: string
     borderStrong: string
+    borderOnInverse: string
     link: string
     linkDisabled: string
+    navText: string
+    navLink: string
     focusRing: string
     accent: string
     accentHover: string
     accentPressed: string
+    shadow: string
   }
   interface Palette {
     roles: ColorRoles

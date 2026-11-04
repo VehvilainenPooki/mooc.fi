@@ -37,8 +37,8 @@ function HideOnScroll({ window, children }: HideOnScrollProps) {
 
 const HyToolbar = styled(Toolbar)(
   ({ theme }) => `
-  background-color: ${theme.palette.common.grayscale.black};
-  border-bottom: 2px solid rgb(0, 0, 0, 0.7);
+  background-color: ${theme.vars.palette.roles.surfaceInverse};
+  border-bottom: 2px solid ${theme.vars.palette.roles.surfaceInverseBorder};
   position: relative;
   padding: 0;
   margin: 0;
@@ -66,7 +66,7 @@ const GroupToolbar = styled(Toolbar)(
 
 const HyLogo = styled(HyLogoIcon)(
   ({ theme }) => `
-  fill: ${theme.palette.common.grayscale.white};
+  fill: ${theme.vars.palette.roles.textOnInverse};
   height: 32px !important;
   width: 33.41px;
   transition: none !important;
@@ -77,7 +77,7 @@ const HyLabel = styled("span")(
   ({ theme }) => `
   ${fontSize(12, 14)}
   font-weight: 700;
-  color: ${theme.palette.common.grayscale.white};
+  color: ${theme.vars.palette.roles.textOnInverse};
   letter-spacing: -0.7px;
   margin-left: 8px;
   max-width: 160px;

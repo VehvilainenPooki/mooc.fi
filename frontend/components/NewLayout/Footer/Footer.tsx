@@ -17,7 +17,7 @@ import HomeTranslations from "/translations/home"
 const FooterContainer = styled("footer")(
   ({ theme }) => `
   display: block;
-  background-color: ${theme.palette.common.grayscale.black};
+  background-color: ${theme.vars.palette.roles.surfaceInverse};
   max-width: 100%;
   margin-top: 5rem;
 `,
@@ -25,7 +25,7 @@ const FooterContainer = styled("footer")(
 
 const FooterBase = styled("div")(
   ({ theme }) => `
-  background-color: ${theme.palette.common.grayscale.black};
+  background-color: ${theme.vars.palette.roles.surfaceInverse};
   display: flex;
   flex-direction: column-reverse;
   max-height: 100%;
@@ -78,7 +78,7 @@ const FooterBaseLogo = styled("div")(
     ${fontSize(18, 16)}
     font-weight: 700;
     letter-spacing: -0.9px;
-    color: ${theme.palette.common.grayscale.white};
+    color: ${theme.vars.palette.roles.textOnInverse};
     text-transform: uppercase;
 
     min-width: max-content;
@@ -90,7 +90,7 @@ const FooterBaseLogo = styled("div")(
 const FooterBaseContent = styled("div")(
   ({ theme }) => `
   ${fontSize(16, 24)}
-  color: ${theme.palette.common.grayscale.white};
+  color: ${theme.vars.palette.roles.textOnInverse};
   font-style: normal;
   font-weight: 600;
   letter-spacing: -0.1px;
@@ -114,7 +114,7 @@ const FooterBaseContent = styled("div")(
   }
 
   a {
-    color: ${theme.palette.common.grayscale.white};
+    color: ${theme.vars.palette.roles.textOnInverse};
   }
 `,
 )
@@ -173,7 +173,7 @@ const FooterBaseCopy = styled("span")(
   ({ theme }) => `
   ${fontSize(16, 24)}
   bottom: 40px;
-  color: ${theme.palette.common.grayscale.white};
+  color: ${theme.vars.palette.roles.textOnInverse};
   display: inline-block;
   font-weight: 600;
   letter-spacing: -0.1px;
@@ -184,10 +184,10 @@ const FooterBaseCopy = styled("span")(
   width: 100%;
 
   a {
-    color: ${theme.palette.common.grayscale.white};
+    color: ${theme.vars.palette.roles.textOnInverse};
 
     &::hover {
-      color: ${theme.palette.common.grayscale.medium};
+      color: ${theme.vars.palette.roles.textOnInverseMuted};
       text-decoration: underline;
     }
   }
@@ -216,20 +216,20 @@ const SocialLink = styled(Link)(
   ({ theme }) => `
   margin-right: 24px;
 
-  color: ${theme.palette.common.grayscale.white};
+  color: ${theme.vars.palette.roles.textOnInverse};
   svg {
     width: 36px !important;
     height: 36px !important;
-    fill: ${theme.palette.common.grayscale.white};
+    fill: ${theme.vars.palette.roles.textOnInverse};
   }
   :last-child() {
     margin-right: 0;
   }
 
   &:hover {
-    color: ${theme.palette.common.grayscale.medium} !important;
+    color: ${theme.vars.palette.roles.textOnInverseMuted} !important;
     svg {
-      fill: ${theme.palette.common.grayscale.medium} !important;
+      fill: ${theme.vars.palette.roles.textOnInverseMuted} !important;
     }
   }
 `,
@@ -237,7 +237,7 @@ const SocialLink = styled(Link)(
 
 const HyLogo = styled(HyLogoIcon)(
   ({ theme }) => `
-  fill: ${theme.palette.common.grayscale.white};
+  fill: ${theme.vars.palette.roles.textOnInverse};
   height: 32px !important;
   width: 33.41px;
   transition: none !important;
@@ -254,7 +254,7 @@ const HyLogoLabel = styled("span")(
   ${fontSize(18, 16)}
   font-weight: 700;
   letter-spacing: -0.7px;
-  color: ${theme.palette.common.grayscale.white};
+  color: ${theme.vars.palette.roles.textOnInverse};
   text-transform: uppercase;
   margin-left: 8px;
   max-width: 90px;
@@ -285,8 +285,8 @@ const FooterLink = styled(Link)(
   ${fontSize(14, 18)}
   font-weight: 600;
   height: fit-content;
-  border-bottom: 1px solid ${theme.palette.common.grayscale.white};
-  color: ${theme.palette.common.grayscale.white};
+  border-bottom: 1px solid ${theme.vars.palette.roles.borderOnInverse};
+  color: ${theme.vars.palette.roles.textOnInverse};
   letter-spacing: -0.5px;
   padding: 15px 20px 15px 0;
   display: flex;
@@ -297,7 +297,7 @@ const FooterLink = styled(Link)(
   width: 100%;
 
   svg {
-    fill: ${theme.palette.common.grayscale.white};
+    fill: ${theme.vars.palette.roles.textOnInverse};
     position: absolute;
     right: 0;
     top: 50%;

@@ -28,7 +28,7 @@ const NarrowColumn = styled("div")`
 const BreadcrumbList = styled("ol")(
   ({ theme }) => `
   margin: 0;
-  color: ${theme.palette.common.grayscale.dark};
+  color: ${theme.vars.palette.roles.textMuted};
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -64,14 +64,14 @@ const BreadcrumbItemComponent = styled("li")<BreadcrumbItemComponentProps>(
   > span {
     color: ${
       isCurrent
-        ? theme.palette.common.grayscale.dark
-        : theme.palette.common.brand.light
+        ? theme.vars.palette.roles.textMuted
+        : theme.vars.palette.roles.navLink
     };
     ${isCurrent ? "display: block;" : ""}
     text-decoration: none;
 
     &:hover {
-      color: ${theme.palette.common.brand.active};
+      color: ${theme.vars.palette.roles.accentHover};
     }
   }
 
