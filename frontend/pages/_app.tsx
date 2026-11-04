@@ -19,6 +19,7 @@ import useIsOld from "/hooks/useIsOld"
 import { useScrollToHash } from "/hooks/useScrollToHash"
 import useSeoConfig from "/hooks/useSeoConfig"
 import useThemeWithLocale from "/hooks/useThemeWithLocale"
+import CssVarsProvider from "/lib/reexports/CssVarsProvider"
 import withApolloClient from "/lib/with-apollo-client"
 
 interface MyAppProps extends AppProps {
@@ -51,7 +52,7 @@ export function MyApp({ Component, pageProps, deviceType }: MyAppProps) {
 
   const isOld = useIsOld()
   const seoConfig = useSeoConfig()
-  const themeWithLocale = useThemeWithLocale(deviceType)
+  const { isCssVarsTheme, theme } = useThemeWithLocale(deviceType)
   const alternateLanguage = useAlternateLanguage()
 
   const loginStateContextValue = useMemo(
@@ -68,6 +69,22 @@ export function MyApp({ Component, pageProps, deviceType }: MyAppProps) {
     typeof document !== "undefined" &&
     "container" in document.documentElement.style
 
+  const content = (
+    <>
+      <CssBaseline />
+      <QueryClientProvider client={queryClient}>
+        <LoginStateProvider value={loginStateContextValue}>
+          <AppContextProvider>
+            <DynamicLayout isOld={isOld}>
+              <DefaultSeo {...seoConfig} />
+              <Component {...pageProps} />
+            </DynamicLayout>
+          </AppContextProvider>
+        </LoginStateProvider>
+      </QueryClientProvider>
+    </>
+  )
+
   return (
     <>
       <Head>
@@ -83,19 +100,13 @@ export function MyApp({ Component, pageProps, deviceType }: MyAppProps) {
           />
         )}
       </Head>
-      <ThemeProvider theme={themeWithLocale}>
-        <CssBaseline />
-        <QueryClientProvider client={queryClient}>
-          <LoginStateProvider value={loginStateContextValue}>
-            <AppContextProvider>
-              <DynamicLayout isOld={isOld}>
-                <DefaultSeo {...seoConfig} />
-                <Component {...pageProps} />
-              </DynamicLayout>
-            </AppContextProvider>
-          </LoginStateProvider>
-        </QueryClientProvider>
-      </ThemeProvider>
+      {isCssVarsTheme ? (
+        <CssVarsProvider theme={theme} defaultMode="light">
+          {content}
+        </CssVarsProvider>
+      ) : (
+        <ThemeProvider theme={theme}>{content}</ThemeProvider>
+      )}
     </>
   )
 }

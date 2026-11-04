@@ -35,34 +35,34 @@ export const courseColorSchemes: Record<
   string,
   PaletteColor[keyof PaletteColor]
 > = {
-  "cyber-security": newTheme.palette.crimson.dark2!,
-  programming: newTheme.palette.green.dark2!,
-  "pilvipohjaiset-websovellukset": newTheme.palette.blue.dark2!,
-  "tekoaly-ja-data": newTheme.palette.purple.dark2!,
-  other: newTheme.palette.gray.dark1!,
-  program: newTheme.palette.green.dark2, // dev
-  webdev: newTheme.palette.blue.dark2, // dev
+  "cyber-security": newTheme.vars.palette.crimson.dark2!,
+  programming: newTheme.vars.palette.green.dark2!,
+  "pilvipohjaiset-websovellukset": newTheme.vars.palette.blue.dark2!,
+  "tekoaly-ja-data": newTheme.vars.palette.purple.dark2!,
+  other: newTheme.vars.palette.gray.dark1!,
+  program: newTheme.vars.palette.green.dark2, // dev
+  webdev: newTheme.vars.palette.blue.dark2, // dev
 }
 
 export const tagColorSchemes: Record<string, PaletteColor[keyof PaletteColor]> =
   {
-    other: newTheme.palette.gray.dark1!,
-    difficulty: newTheme.palette.blue.dark1!,
-    module: newTheme.palette.purple.dark1!,
-    language: newTheme.palette.green.dark1!,
-    program: newTheme.palette.green.dark2, // dev
-    webdev: newTheme.palette.blue.dark2, // dev
+    other: newTheme.vars.palette.gray.dark1!,
+    difficulty: newTheme.vars.palette.blue.dark1!,
+    module: newTheme.vars.palette.purple.dark1!,
+    language: newTheme.vars.palette.green.dark1!,
+    program: newTheme.vars.palette.green.dark2, // dev
+    webdev: newTheme.vars.palette.blue.dark2, // dev
   }
 
 export const moduleColorSchemes: Record<
   string,
   PaletteColor[keyof PaletteColor]
 > = {
-  "cyber-security": newTheme.palette.crimson.dark3!,
-  programming: newTheme.palette.green.dark3!,
-  "pilvipohjaiset-websovellukset": newTheme.palette.blue.dark3!,
-  "tekoaly-ja-data": newTheme.palette.purple.dark3!,
-  other: newTheme.palette.gray.dark2!,
-  program: newTheme.palette.green.dark3, // dev
-  webdev: newTheme.palette.blue.dark3, // dev
+  "cyber-security": newTheme.vars.palette.crimson.dark3!,
+  programming: newTheme.vars.palette.green.dark3!,
+  "pilvipohjaiset-websovellukset": newTheme.vars.palette.blue.dark3!,
+  "tekoaly-ja-data": newTheme.vars.palette.purple.dark3!,
+  other: newTheme.vars.palette.gray.dark2!,
+  program: newTheme.vars.palette.green.dark3, // dev
+  webdev: newTheme.vars.palette.blue.dark3, // dev
 }

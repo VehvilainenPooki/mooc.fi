@@ -181,6 +181,36 @@ declare module "@mui/material/styles" {
     red?: PaletteOptions["primary"]
     yellow?: PaletteOptions["primary"]
   }
+
+  // Semantic color roles of the new theme. Every color scheme gives all of them
+  // a value; leaf code reads them as theme.vars.palette.roles.*
+  interface ColorRoles {
+    surfaceRaised: string
+    surfaceSunken: string
+    surfaceInverse: string
+    text: string
+    textHeading: string
+    textMuted: string
+    textDisabled: string
+    textOnAccent: string
+    textOnInverse: string
+    textOnInverseMuted: string
+    border: string
+    borderStrong: string
+    link: string
+    linkDisabled: string
+    focusRing: string
+    accent: string
+    accentHover: string
+    accentPressed: string
+  }
+  interface Palette {
+    roles: ColorRoles
+  }
+  interface PaletteOptions {
+    roles?: ColorRoles
+  }
+
   interface PaletteColor {
     light1?: string
     light2?: string

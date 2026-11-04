@@ -12,7 +12,9 @@ import originalTheme, {
 function CustomDocument(props: DocumentProps) {
   const isOld = props.__NEXT_DATA__.page.includes("_old")
 
-  const theme = isOld ? originalTheme : newTheme
+  const themeColor = isOld
+    ? originalTheme.palette.primary.main
+    : newTheme.colorSchemes.light.palette.primary.main
   const fontVariableClass = isOld
     ? originalFontVariableClass
     : newFontVariableClass
@@ -21,7 +23,7 @@ function CustomDocument(props: DocumentProps) {
     <Html lang={props.locale ?? "fi"} dir="ltr" className={fontVariableClass}>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="theme-color" content={theme.palette.primary.main} />
+        <meta name="theme-color" content={themeColor} />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <body>
