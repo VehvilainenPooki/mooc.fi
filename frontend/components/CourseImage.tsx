@@ -10,6 +10,7 @@ import { useTranslator } from "/hooks/useTranslator"
 import CoursesTranslations from "/translations/courses"
 
 import { ImageCoreFieldsFragment } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 const ImageComponentBase = css`
   width: 100%;
@@ -19,7 +20,7 @@ const ImageComponentBase = css`
 
 const PlaceholderComponent = styled("div")`
   ${ImageComponentBase.styles}
-  background-color: #F0F0F0;
+  background-color: ${cssRole("imageFallback")};
   display: flex;
   justify-content: center;
   align-items: center;

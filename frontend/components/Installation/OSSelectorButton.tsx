@@ -5,6 +5,7 @@ import { css, styled } from "@mui/material/styles"
 
 import UserOSContext from "/contexts/UserOSContext"
 import { UserOSType } from "/util/getUserOS"
+import { cssRole } from "/src/newTheme/roles"
 
 interface ButtonProps {
   selected: boolean
@@ -14,7 +15,7 @@ const StyledButtonBase = styled(ButtonBase)<ButtonProps>`
   margin: 1em;
   display: flex;
   flex-direction: column;
-  ${(props) => props.selected && `border-bottom: 4px solid #00D2FF;`}
+  ${(props) => props.selected && `border-bottom: 4px solid ${cssRole("accentBright")};`}
   padding: 1 em;
 `
 

@@ -18,13 +18,14 @@ import { useBreadcrumbs } from "/hooks/useBreadcrumbs"
 import { useTranslator } from "/hooks/useTranslator"
 import InstallationTranslations from "/translations/installation"
 import getUserOS, { UserOSType } from "/util/getUserOS"
+import { cssRole } from "/src/newTheme/roles"
 
 const Background = styled("section")`
   padding-top: 2em;
   padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 2em;
-  background-color: #ffc107;
+  background-color: ${cssRole("surfaceAttention")};
 `
 
 const Title = styled(Typography)`
@@ -34,7 +35,7 @@ const Title = styled(Typography)`
 
 const TitleBackground = styled("div")(
   ({ theme }) => `
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
   max-width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -68,9 +69,9 @@ export const SectionBox = styled("div")`
 
 export const ContentBox = styled("div")(
   ({ theme }) => `
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
   max-width: 39em;
-  border: 3px solid black;
+  border: 3px solid ${cssRole("borderStrong")};
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
@@ -92,7 +93,7 @@ export const ContentBox = styled("div")(
     line-height: 53px;
     font-family: var(--header-font), sans-serif !important;
     text-decoration: underline;
-    text-decoration-color: #00d2ff;
+    text-decoration-color: ${cssRole("accentBright")};
   }
   h4 {
     font-size: 23px;
@@ -104,14 +105,14 @@ export const ContentBox = styled("div")(
     max-width: 100%;
   }
   code {
-    background-color: #e6f4f1;
+    background-color: ${cssRole("codeSurfaceTinted")};
     padding: 0.5rem;
     font-size: smaller;
   }
   img {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    background-color: #c3fcf2;
+    background-color: ${cssRole("imageBackdrop")};
     padding: 1.5rem;
   }
 
@@ -123,7 +124,7 @@ export const ContentBox = styled("div")(
 )
 
 export const CodeBox = styled("div")`
-  background-color: #e6f4f1;
+  background-color: ${cssRole("codeSurfaceTinted")};
   padding: 0.5rem;
   margin-left: 2.5rem;
 
@@ -141,7 +142,7 @@ export const CodeBox = styled("div")`
 
 export const Note = styled("section")`
   padding: 1em;
-  background-color: #eeeeee;
+  background-color: ${cssRole("surfaceNote")};
   font-size: 16px;
 `
 

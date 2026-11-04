@@ -265,6 +265,21 @@ declare module "@mui/material/styles" {
     infoBorder: string
     infoText: string
     codeSurface: string
+    surfaceAttention: string
+    surfaceNote: string
+    surfaceWarningStrong: string
+    accentBright: string
+    codeSurfaceTinted: string
+    imageBackdrop: string
+    imageFallback: string
+    certificateButton: string
+    noticeDangerBg: string
+    panelBorder: string
+    panelDivider: string
+    panelText: string
+    panelTextSecondary: string
+    panelTextMuted: string
+    panelShadow: string
   }
   interface Palette {
     roles: ColorRoles

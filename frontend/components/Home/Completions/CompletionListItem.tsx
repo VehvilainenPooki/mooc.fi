@@ -16,9 +16,10 @@ import {
   CompletionDetailedFieldsFragment,
   UserOverviewCourseFieldsFragment,
 } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 const StyledButton = styled(Button)`
-  color: black;
+  color: ${cssRole("text")};
   text-align: center;
   max-width: 20vw;
 `
@@ -41,7 +42,7 @@ interface CompletionListItemProps {
 }
 
 const ListItemContainer = styled(Paper)`
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
   margin-bottom: 1rem;
   width: 100%;
   align-items: center;

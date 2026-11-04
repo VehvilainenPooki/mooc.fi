@@ -29,11 +29,12 @@ import {
   CompletionDetailedFieldsFragment,
   CourseCoreFieldsFragment,
 } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 const CERTIFICATES_URL = "https://certificates.mooc.fi"
 
 const StyledButton = styled(Button)`
-  background-color: #005361;
+  background-color: ${cssRole("certificateButton")};
   text-align: center;
   max-width: 20vw;
 ` as typeof Button
@@ -45,8 +46,8 @@ const StyledTextField = styled(TextField)`
   margin-bottom: 1rem;
 `
 const NoCertificateGeneratedNote = styled(Paper)`
-  background-color: #f05361;
-  color: #ffffff;
+  background-color: ${cssRole("noticeDangerBg")};
+  color: ${cssRole("textOnDanger")};
   padding: 0.5rem;
   margin: auto;
   gap: 0.5rem;

@@ -12,13 +12,14 @@ import {
   Typography,
 } from "@mui/material"
 import { styled } from "@mui/material/styles"
+import { cssRole } from "/src/newTheme/roles"
 
 export const Background = styled("section")`
   padding-top: 2em;
   padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 2em;
-  background-color: #ffc107;
+  background-color: ${cssRole("surfaceAttention")};
 `
 
 export const Content = styled("div")`
@@ -26,9 +27,9 @@ export const Content = styled("div")`
 `
 
 export const ContentBox = styled("div")`
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
   max-width: 39em;
-  border: 3px solid black;
+  border: 3px solid ${cssRole("borderStrong")};
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
@@ -49,7 +50,7 @@ export const ContentBox = styled("div")`
     line-height: 53px;
     font-family: var(--header-font), sans-serif !important;
     text-decoration: underline;
-    text-decoration-color: #00d2ff;
+    text-decoration-color: ${cssRole("accentBright")};
   }
   h4 {
     font-size: 23px;
@@ -61,13 +62,13 @@ export const ContentBox = styled("div")`
     max-width: 100%;
   }
   code {
-    background-color: #e6f4f1;
+    background-color: ${cssRole("codeSurfaceTinted")};
     padding: 0.5rem;
   }
   img {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    background-color: #c3fcf2;
+    background-color: ${cssRole("imageBackdrop")};
     padding: 1.5rem;
   }
 `
@@ -79,7 +80,7 @@ export const Title = styled(Typography)`
 ` as typeof Typography
 
 export const TitleBackground = styled("div")`
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
   max-width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -100,7 +101,7 @@ export const SectionBox = styled("div")`
 
 export const Note = styled("section")`
   padding: 1em;
-  background-color: #eeeeee;
+  background-color: ${cssRole("surfaceNote")};
 `
 
 export const Link = styled(MUILink)`
