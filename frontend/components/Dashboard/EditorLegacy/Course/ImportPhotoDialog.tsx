@@ -24,6 +24,7 @@ import {
   EditorCourseOtherCoursesFieldsFragment,
   ImageCoreFieldsFragment,
 } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 const ImageContainer = styled("div")`
   display: flex;
@@ -40,7 +41,7 @@ const ImageContainer = styled("div")`
 const ImagePlaceholder = styled("div")`
   width: 350px;
   height: 250px;
-  background-color: #eeeeee;
+  background-color: ${cssRole("surfaceNote")};
 `
 
 interface ImportPhotoDialogProps {

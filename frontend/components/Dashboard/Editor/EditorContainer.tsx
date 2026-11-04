@@ -20,6 +20,7 @@ import { FormValues } from "./types"
 import useExitConfirmation from "/hooks/useExitConfirmation"
 import { useTranslator } from "/hooks/useTranslator"
 import CommonTranslations from "/translations/common"
+import { cssRole } from "/src/newTheme/roles"
 
 const isProduction = process.env.NODE_ENV === "production"
 
@@ -28,12 +29,12 @@ const FormBackground = styled(Paper)`
 `
 
 const StyledForm = styled("form")`
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
   padding: 2rem;
 `
 
 const StyledFormBackground = styled(FormBackground)`
-  background-color: #8c64ac;
+  background-color: ${cssRole("editorBackdrop")};
 `
 
 StyledFormBackground.defaultProps = {

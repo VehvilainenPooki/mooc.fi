@@ -20,6 +20,7 @@ import { CourseFormValues, TagFormValue } from "./types"
 import { useAnchor } from "/hooks/useAnchors"
 import { useTranslator } from "/hooks/useTranslator"
 import CoursesTranslations from "/translations/courses"
+import { cssRole } from "/src/newTheme/roles"
 
 const TagTypeChip = styled(Chip)`
   margin-right: 0.5rem;
@@ -27,7 +28,7 @@ const TagTypeChip = styled(Chip)`
 
 const GroupHeader = styled("div")`
   padding: 0.5rem;
-  background-color: #eee;
+  background-color: ${cssRole("chipSurface")};
 `
 const GroupItems = styled("ul")`
   padding: 0;

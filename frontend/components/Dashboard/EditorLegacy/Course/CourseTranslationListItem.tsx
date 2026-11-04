@@ -8,6 +8,7 @@ import { CourseFormValues } from "./types"
 import { useTranslator } from "/hooks/useTranslator"
 import CoursesTranslations from "/translations/courses"
 import { mapLangToLanguage } from "/util/dataFormatFunctions"
+import { cssRole } from "/src/newTheme/roles"
 
 const LanguageVersionContainer = styled("div")`
   padding-top: 1rem;
@@ -20,7 +21,7 @@ const LanguageVersionTitle = styled(Typography)`
   margin-bottom: 1.5rem;
   font-size: 33px;
   line-height: 52px;
-  color: #005b5b;
+  color: ${cssRole("editorHeading")};
 ` as typeof Typography
 
 const inputLabelProps = {

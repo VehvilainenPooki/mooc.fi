@@ -27,6 +27,7 @@ import { useTranslator } from "/hooks/useTranslator"
 import withEnumeratingAnchors from "/lib/with-enumerating-anchors"
 import CommonTranslations from "/translations/common"
 import flattenKeys from "/util/flattenKeys"
+import { cssRole } from "/src/newTheme/roles"
 
 // TODO: show delete to course owner
 const isProduction = process.env.NODE_ENV === "production"
@@ -43,7 +44,7 @@ const FormBackground = styled(Paper)(
 const Status = styled("p", { shouldForwardProp: (prop) => prop !== "error" })<
   FormikContextType<unknown>["status"]
 >`
-  color: ${(props) => (props.error ? "#FF0000" : "default")};
+  color: ${(props) => (props.error ? cssRole("dangerStrong") : "default")};
 `
 
 interface FormWrapperProps<T extends FormValues> {
@@ -139,7 +140,7 @@ const FormWrapper = <T extends FormValues>(
 
   return (
     <Container maxWidth="md">
-      <FormBackground elevation={1} style={{ backgroundColor: "#8C64AC" }}>
+      <FormBackground elevation={1} style={{ backgroundColor: cssRole("editorBackdrop") }}>
         {children}
         <br />
         <Grid container direction="row" spacing={2}>

@@ -55,6 +55,7 @@ import {
   EditorCourseOtherCoursesFieldsFragment,
   StudyModuleDetailedFieldsFragment,
 } from "/graphql/generated"
+import { cssRole } from "/src/newTheme/roles"
 
 interface CoverProps {
   covered: boolean
@@ -81,7 +82,7 @@ interface Labelprops {
 
 export const StyledLabel = styled(InputLabel)<Labelprops>`
   margin-bottom: 0.3rem;
-  color: ${(props) => (props.required ? "#DF7A46" : "#245B6D")};
+  color: ${(props) => (props.required ? cssRole("requiredLabel") : cssRole("optionalLabel"))};
 `
 
 export const FormFieldGroup = styled("div")`
@@ -90,7 +91,7 @@ export const FormFieldGroup = styled("div")`
   padding: 0.5rem;
   width: 90%;
   margin: 1rem auto 3rem auto;
-  border-bottom: 4px dotted #98b0a9;
+  border-bottom: 4px dotted ${cssRole("editorSectionRule")};
 `
 
 interface RenderFormProps {
@@ -134,7 +135,7 @@ const CourseEditFormComponent = ({
 
   return (
     <LocalizationProvider dateAdapter={AdapterLuxon} adapterLocale={locale}>
-      <Form style={{ backgroundColor: "white", padding: "2rem" }}>
+      <Form style={{ backgroundColor: cssRole("surfaceRaised"), padding: "2rem" }}>
         {}
         <CourseLanguageSelector
           selectedLanguage={selectedLanguage}
@@ -253,7 +254,7 @@ const CourseEditFormComponent = ({
           <TabSection currentTab={tab} tab={0}>
             <FormFieldGroup>
               <FormControl component="fieldset">
-                <FormLabel component="legend" style={{ color: "#DF7A46" }}>
+                <FormLabel component="legend" style={{ color: cssRole("requiredLabel") }}>
                   {t("courseStatus")}*
                 </FormLabel>
                 <EnumeratingAnchor id="status" />

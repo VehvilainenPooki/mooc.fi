@@ -4,13 +4,14 @@ import { styled } from "@mui/material/styles"
 import LanguageSelectorForm from "./LanguageSelectorForm"
 import { useTranslator } from "/hooks/useTranslator"
 import CoursesTranslations from "/translations/courses"
+import { cssRole } from "/src/newTheme/roles"
 
 const StyledCard = styled("div")`
   margin: 5px;
   padding: 1rem;
   display: flex;
   flex-direction: row;
-  border-bottom: 1.5px solid #4d78a3;
+  border-bottom: 1.5px solid ${cssRole("tabUnderline")};
 `
 const StyledText = styled(Typography)`
   font-size: 16px;

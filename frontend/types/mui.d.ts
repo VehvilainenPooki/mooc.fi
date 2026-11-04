@@ -280,6 +280,33 @@ declare module "@mui/material/styles" {
     panelTextSecondary: string
     panelTextMuted: string
     panelShadow: string
+    dangerHighlight: string
+    dangerText: string
+    dangerStrong: string
+    textSecondary: string
+    placeholderMuted: string
+    chipSurface: string
+    editorSectionRule: string
+    editorHeading: string
+    editorRemoveButton: string
+    editorBackdrop: string
+    requiredLabel: string
+    optionalLabel: string
+    inputBorder: string
+    inputBorderHover: string
+    tabSurface: string
+    tabSurfaceHover: string
+    tabSurfaceActive: string
+    tabShadow: string
+    tabInnerGlow: string
+    tabUnderline: string
+    dropzoneAcceptBg: string
+    dropzoneRejectBg: string
+    dropzoneAccept: string
+    overlayButton: string
+    overlayButtonDanger: string
+    overlayShadow: string
+    overlayShadowInset: string
   }
   interface Palette {
     roles: ColorRoles

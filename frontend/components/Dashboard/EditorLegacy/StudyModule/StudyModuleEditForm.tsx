@@ -48,9 +48,10 @@ import useDebounce from "/hooks/useDebounce"
 import { useTranslator } from "/hooks/useTranslator"
 import CommonTranslations from "/translations/common"
 import StudyModulesTranslations from "/translations/study-modules"
+import { cssRole } from "/src/newTheme/roles"
 
 const FormContainer = styled("div")`
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
   padding: 1rem;
 `
 

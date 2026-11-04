@@ -7,6 +7,7 @@ import { FormSubtitle } from "../common"
 import { initialTranslation } from "./form-validation"
 import { useTranslator } from "/hooks/useTranslator"
 import CoursesTranslations from "/translations/courses"
+import { cssRole } from "/src/newTheme/roles"
 
 const ButtonGroupContainer = styled(ButtonGroup)`
   width: 90%;
@@ -20,25 +21,25 @@ interface ButtonProps {
 }
 const StyledLanguageButton = styled(Button)<ButtonProps>`
   width: 33%;
-  background-color: #378170;
+  background-color: ${cssRole("tabSurface")};
   margin: 0.5rem;
   padding: 3rem;
-  color: white;
+  color: ${cssRole("textOnAccent")};
   font-size: 21px;
   box-shadow:
-    0px 2px 3px rgba(0, 0, 0, 0.5),
-    inset 0px 0px 2px rgba(154, 147, 113, 0.95);
-  border: 1px solid #378170;
+    0px 2px 3px ${cssRole("tabShadow")},
+    inset 0px 0px 2px ${cssRole("tabInnerGlow")};
+  border: 1px solid ${cssRole("tabSurface")};
   &:hover {
-    background-color: #83acda;
-    border: 1px solid #83acda;
-    color: black;
+    background-color: ${cssRole("tabSurfaceHover")};
+    border: 1px solid ${cssRole("tabSurfaceHover")};
+    color: ${cssRole("text")};
   }
   &:disabled {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
-    background-color: #354b45;
-    color: white;
-    border: 1px solid #354b45;
+    box-shadow: 0px 0px 0px ${cssRole("tabShadow")};
+    background-color: ${cssRole("tabSurfaceActive")};
+    color: ${cssRole("textOnAccent")};
+    border: 1px solid ${cssRole("tabSurfaceActive")};
     ${(props) => `text-decoration: ${props.selected ? `underline` : `none`};`}
   }
 `

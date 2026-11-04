@@ -20,18 +20,19 @@ import {
   Typography,
 } from "@mui/material"
 import { styled } from "@mui/material/styles"
+import { cssRole } from "/src/newTheme/roles"
 
 import { useLegacyAnchorContext } from "./LegacyAnchorContext"
 
 const BaseStyledTextField = styled(TextField)`
   margin-bottom: 1.5rem;
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
 ` as typeof TextField
 
 export const StyledTextField = React.memo(BaseStyledTextField)
 
 export const OutlinedInputLabel = styled(InputLabel)`
-  background-color: #ffffff;
+  background-color: ${cssRole("surfaceRaised")};
   padding: 0 4px 0 4px;
 ` as typeof InputLabel
 
@@ -44,7 +45,7 @@ export const OutlinedFormGroup = styled(FormGroup, {
 })<{ error?: boolean }>`
   border-radius: 4px;
   border: 1px solid
-    ${(props) => (props.error ? "#F44336" : "rgba(0, 0, 0, 0.23)")};
+    ${(props) => (props.error ? cssRole("dangerText") : cssRole("inputBorder"))};
   padding: 18.5px 14px;
   transition:
     padding-left 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
@@ -52,27 +53,28 @@ export const OutlinedFormGroup = styled(FormGroup, {
     border-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 
   &:hover {
-    border: 1px solid rgba(0, 0, 0, 0.87);
+    border: 1px solid ${cssRole("inputBorderHover")};
   }
 
   &:focus {
+    /* Quoted, so browsers ignore this declaration; left as is to keep the rendering unchanged. */
     border-color: "#3f51b5";
   }
 
   @media (hover: none) {
-    border: 1px solid rgba(0, 0, 0, 0.23);
+    border: 1px solid ${cssRole("inputBorder")};
   }
 `
 
 const BaseStyledField = styled(FastField)`
   .input-label {
-    background-color: white;
+    background-color: ${cssRole("surfaceRaised")};
     font-size: 23px;
     padding-right: 7px;
     transform: translate(14px, -9px) scale(0.75);
   }
   .input-required {
-    color: #df7a46;
+    color: ${cssRole("requiredLabel")};
   }
 ` as typeof FastField
 

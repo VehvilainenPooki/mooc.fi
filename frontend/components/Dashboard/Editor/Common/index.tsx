@@ -16,6 +16,7 @@ import { css, styled } from "@mui/material/styles"
 import { useEditorContext } from "../EditorContext"
 import { FormValues } from "../types"
 import { ButtonWithPaddingAndMargin as StyledButton } from "/components/Buttons/ButtonWithPaddingAndMargin"
+import { cssRole } from "/src/newTheme/roles"
 
 export const pulseAnimation = css`
   [data-error-pulsate="true"] {
@@ -23,12 +24,13 @@ export const pulseAnimation = css`
     animation-duration: 1s;
     animation-iteration-count: infinite;
 
+    /* The 0% and 100% stops are fully transparent, so they need no theme color. */
     @keyframes pulse-color {
       0% {
         background-color: rgba(255, 255, 255, 0);
       }
       50% {
-        background-color: rgba(255, 0, 0, 0.05);
+        background-color: ${cssRole("dangerHighlight")};
       }
       100% {
         background-color: rgba(255, 255, 255, 0);
@@ -47,7 +49,7 @@ export const FormFieldGroup = styled(FormGroup)`
   padding: 0.5rem;
   width: 90%;
   margin: 1rem auto 3rem auto;
-  border-bottom: 4px dotted #98b0a9;
+  border-bottom: 4px dotted ${cssRole("editorSectionRule")};
 `
 
 export const FormSubtitleWithMargin = styled(FormSubtitle)`
@@ -62,7 +64,7 @@ export const AdjustingAnchorLink = styled("div")<{ id: string }>`
 `
 
 export const ButtonWithWhiteText = styled(StyledButton)`
-  color: white;
+  color: ${cssRole("textOnAccent")};
 `
 
 interface TabSectionProps {
@@ -160,7 +162,7 @@ interface ErrorMessageComponentProps {
 }
 
 const ErrorMessageText = styled(FormHelperText)`
-  color: #f44336;
+  color: ${cssRole("dangerText")};
   margin-top: -1rem;
   margin-bottom: 0.5rem;
 `

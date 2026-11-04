@@ -7,6 +7,7 @@ import { styled } from "@mui/material/styles"
 
 import { useTranslator } from "/hooks/useTranslator"
 import CommonTranslations from "/translations/common"
+import { cssRole } from "/src/newTheme/roles"
 
 // Chrome only gives dragged file mimetype on drop, so all filetypes would appear rejected on drag
 const isChrome =
@@ -31,23 +32,23 @@ const DropzoneContainer = styled("div", {
   padding: 20px;
   background-color: ${() => {
     if (isDragActive) {
-      return isDragAccept ? "#E0FFE0" : "#FFC0C0"
+      return isDragAccept ? cssRole("dropzoneAcceptBg") : cssRole("dropzoneRejectBg")
     }
     if (error) {
-      return "#FFC0C0"
+      return cssRole("dropzoneRejectBg")
     }
-    return "#FFFFFF"
+    return cssRole("surfaceRaised")
   }};
   border-color: ${() => {
     if (isDragActive) {
-      return isDragAccept ? "#00A000" : "#FF0000"
+      return isDragAccept ? cssRole("dropzoneAccept") : cssRole("dangerStrong")
     }
-    return "rgba(0,0,0,0.23)"
+    return cssRole("inputBorder")
   }};
   transition: border 0.24s ease-in-out;
   &:hover {
     cursor: pointer;
-    border-color: #00a000;
+    border-color: ${cssRole("dropzoneAccept")};
   }
   justify-content: center;
   position: relative;
@@ -58,7 +59,7 @@ const ErrorMessage = styled(Typography, {
   shouldForwardProp: (prop) => prop !== "error",
 })<{ error: MessageProps["error"] }>(
   ({ error }) => `
-  color: ${error ? "#FF0000" : "#000000"};
+  color: ${error ? cssRole("dangerStrong") : cssRole("text")};
 `,
 )
 
