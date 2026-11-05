@@ -17,6 +17,7 @@ import { styled } from "@mui/material/styles"
 import { StyledTextField } from "../common"
 import { CourseFormValues } from "./types"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CoursesTranslations from "/translations/courses"
 import { addDomain } from "/util/imageUtils"
 
@@ -24,7 +25,6 @@ import {
   EditorCourseOtherCoursesFieldsFragment,
   ImageCoreFieldsFragment,
 } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const ImageContainer = styled("div")`
   display: flex;

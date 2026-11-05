@@ -24,8 +24,8 @@ import BorderedSection from "/components/BorderedSection"
 import ContainedImage from "/components/Images/ContainedImage"
 import { useAnchor } from "/hooks/useAnchors"
 import { useTranslator } from "/hooks/useTranslator"
-import CoursesTranslations from "/translations/courses"
 import { cssRole } from "/src/newTheme/roles"
+import CoursesTranslations from "/translations/courses"
 
 const hasName = (sponsor: SponsorFormValue) => !!sponsor.name
 

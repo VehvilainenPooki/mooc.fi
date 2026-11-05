@@ -17,10 +17,10 @@ import {
   useUserPointsSummaryFunctionsContext,
 } from "./contexts"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import ProfileTranslations from "/translations/profile"
 
 import { UserCourseSummaryCourseFieldsFragment } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const Container = styled("div")(
   ({ theme }) => `

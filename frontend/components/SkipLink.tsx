@@ -1,9 +1,8 @@
 import { Typography } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
-import { getRoles } from "/src/newTheme/roles"
-
 import { useTranslator } from "/hooks/useTranslator"
+import { getRoles } from "/src/newTheme/roles"
 import CommonTranslations from "/translations/common"
 
 const SkipLinkContainer = styled("a")(

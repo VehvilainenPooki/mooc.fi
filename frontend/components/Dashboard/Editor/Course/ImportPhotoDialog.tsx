@@ -16,6 +16,7 @@ import { useEventCallback } from "@mui/material/utils"
 import { ControlledSelect } from "../Common/Fields"
 import ContainedImage from "/components/Images/ContainedImage"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CoursesTranslations from "/translations/courses"
 import { addDomain } from "/util/imageUtils"
 
@@ -23,7 +24,6 @@ import {
   EditorCourseOtherCoursesFieldsFragment,
   ImageCoreFieldsFragment,
 } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const ImageContainer = styled("div")`
   display: flex;

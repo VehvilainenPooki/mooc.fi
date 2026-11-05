@@ -4,10 +4,10 @@ import { LinearProgress } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import ProfileTranslations from "/translations/profile"
 import { FormattedGroupPoints } from "/util/formatPointsData"
 import round from "/util/round"
-import { cssRole } from "/src/newTheme/roles"
 
 const ChartContainer = styled("div")`
   display: flex;

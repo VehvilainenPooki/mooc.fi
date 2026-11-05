@@ -17,10 +17,10 @@ import LoaderImage from "/components/LoaderImage"
 import { ClickableDiv } from "/components/Surfaces/ClickableCard"
 import useIsOld from "/hooks/useIsOld"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import StudyModulesTranslations from "/translations/study-modules"
 
 import { StudyModuleDetailedFieldsFragment } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const Base = styled(ClickableDiv)`
   width: 100%;

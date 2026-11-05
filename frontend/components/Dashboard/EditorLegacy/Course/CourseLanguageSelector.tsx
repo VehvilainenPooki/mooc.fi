@@ -6,8 +6,8 @@ import { styled } from "@mui/material/styles"
 import { FormSubtitle } from "../common"
 import { initialTranslation } from "./form-validation"
 import { useTranslator } from "/hooks/useTranslator"
-import CoursesTranslations from "/translations/courses"
 import { cssRole } from "/src/newTheme/roles"
+import CoursesTranslations from "/translations/courses"
 
 const ButtonGroupContainer = styled(ButtonGroup)`
   width: 90%;

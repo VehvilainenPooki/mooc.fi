@@ -13,11 +13,11 @@ import { CardTitle } from "/components/Text/headers"
 import { useFilterContext } from "/contexts/FilterContext"
 import useIsOld from "/hooks/useIsOld"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CoursesTranslations from "/translations/courses"
 import { formatDateTime } from "/util/dataFormatFunctions"
 
 import { EditorCourseFieldsFragment } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const CardBase = styled("div", {
   shouldForwardProp: (prop) => prop !== "isHidden",
@@ -30,7 +30,8 @@ const CardBase = styled("div", {
     transition-duration: 0.4s;
   }
 
-  background-color: ${(props) => (props.isHidden ? cssRole("surfaceHidden") : cssRole("surfaceRaised"))};
+  background-color: ${(props) =>
+    props.isHidden ? cssRole("surfaceHidden") : cssRole("surfaceRaised")};
   height: 100%;
   width: 100%;
   min-width: 340px;

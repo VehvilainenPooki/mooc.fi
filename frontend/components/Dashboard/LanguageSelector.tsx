@@ -3,8 +3,8 @@ import { styled } from "@mui/material/styles"
 
 import LanguageSelectorForm from "./LanguageSelectorForm"
 import { useTranslator } from "/hooks/useTranslator"
-import CoursesTranslations from "/translations/courses"
 import { cssRole } from "/src/newTheme/roles"
+import CoursesTranslations from "/translations/courses"
 
 const StyledCard = styled("div")`
   margin: 5px;

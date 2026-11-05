@@ -23,13 +23,13 @@ import { useAlertContext } from "/contexts/AlertContext"
 import { useLoginStateContext } from "/contexts/LoginStateContext"
 import { useCertificate } from "/hooks/useCertificate"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CompletionsTranslations from "/translations/completions"
 
 import {
   CompletionDetailedFieldsFragment,
   CourseCoreFieldsFragment,
 } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const CERTIFICATES_URL = "https://certificates.mooc.fi"
 

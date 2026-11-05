@@ -25,9 +25,9 @@ import { ButtonWithPaddingAndMargin as StyledButton } from "/components/Buttons/
 import { getFirstErrorAnchor } from "/hooks/useEnumeratingAnchors"
 import { useTranslator } from "/hooks/useTranslator"
 import withEnumeratingAnchors from "/lib/with-enumerating-anchors"
+import { cssRole } from "/src/newTheme/roles"
 import CommonTranslations from "/translations/common"
 import flattenKeys from "/util/flattenKeys"
-import { cssRole } from "/src/newTheme/roles"
 
 // TODO: show delete to course owner
 const isProduction = process.env.NODE_ENV === "production"
@@ -140,7 +140,10 @@ const FormWrapper = <T extends FormValues>(
 
   return (
     <Container maxWidth="md">
-      <FormBackground elevation={1} style={{ backgroundColor: cssRole("editorBackdrop") }}>
+      <FormBackground
+        elevation={1}
+        style={{ backgroundColor: cssRole("editorBackdrop") }}
+      >
         {children}
         <br />
         <Grid container direction="row" spacing={2}>

@@ -16,9 +16,9 @@ import Spinner from "/components/Spinner"
 import UserOSContext from "/contexts/UserOSContext"
 import { useBreadcrumbs } from "/hooks/useBreadcrumbs"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import InstallationTranslations from "/translations/installation"
 import getUserOS, { UserOSType } from "/util/getUserOS"
-import { cssRole } from "/src/newTheme/roles"
 
 const Background = styled("section")`
   padding-top: 2em;

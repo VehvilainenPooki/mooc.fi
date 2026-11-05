@@ -22,10 +22,10 @@ import ClipboardButton from "/components/ClipboardButton"
 import { CardTitle } from "/components/Text/headers"
 import { useLoginStateContext } from "/contexts/LoginStateContext"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import ProfileTranslations from "/translations/profile"
 
 import { UserCourseSummaryCourseFieldsFragment } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 export const CourseEntriesContainer = styled("div")`
   display: flex;

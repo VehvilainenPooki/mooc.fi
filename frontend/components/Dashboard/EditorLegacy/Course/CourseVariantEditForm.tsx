@@ -15,8 +15,8 @@ import { initialVariant } from "./form-validation"
 import { CourseFormValues } from "./types"
 import { ButtonWithPaddingAndMargin } from "/components/Buttons/ButtonWithPaddingAndMargin"
 import { useTranslator } from "/hooks/useTranslator"
-import CoursesTranslations from "/translations/courses"
 import { cssRole } from "/src/newTheme/roles"
+import CoursesTranslations from "/translations/courses"
 
 const ButtonWithWhiteText = styled(ButtonWithPaddingAndMargin)`
   color: ${cssRole("textOnAccent")};

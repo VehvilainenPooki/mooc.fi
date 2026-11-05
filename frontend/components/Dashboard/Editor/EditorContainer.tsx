@@ -19,8 +19,8 @@ import { useEditorContext, useEditorMethods } from "./EditorContext"
 import { FormValues } from "./types"
 import useExitConfirmation from "/hooks/useExitConfirmation"
 import { useTranslator } from "/hooks/useTranslator"
-import CommonTranslations from "/translations/common"
 import { cssRole } from "/src/newTheme/roles"
+import CommonTranslations from "/translations/common"
 
 const isProduction = process.env.NODE_ENV === "production"
 

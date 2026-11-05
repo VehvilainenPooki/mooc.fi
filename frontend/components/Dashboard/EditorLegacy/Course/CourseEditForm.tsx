@@ -48,6 +48,7 @@ import { CourseFormValues } from "./types"
 import UserCourseSettingsVisibilityEditForm from "./UserCourseSettingsVisibilityEditForm"
 import { useQueryParameter } from "/hooks/useQueryParameter"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CommonTranslations from "/translations/common"
 import CoursesTranslations from "/translations/courses"
 
@@ -55,7 +56,6 @@ import {
   EditorCourseOtherCoursesFieldsFragment,
   StudyModuleDetailedFieldsFragment,
 } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 interface CoverProps {
   covered: boolean
@@ -82,7 +82,8 @@ interface Labelprops {
 
 export const StyledLabel = styled(InputLabel)<Labelprops>`
   margin-bottom: 0.3rem;
-  color: ${(props) => (props.required ? cssRole("requiredLabel") : cssRole("optionalLabel"))};
+  color: ${(props) =>
+    props.required ? cssRole("requiredLabel") : cssRole("optionalLabel")};
 `
 
 export const FormFieldGroup = styled("div")`
@@ -135,7 +136,9 @@ const CourseEditFormComponent = ({
 
   return (
     <LocalizationProvider dateAdapter={AdapterLuxon} adapterLocale={locale}>
-      <Form style={{ backgroundColor: cssRole("surfaceRaised"), padding: "2rem" }}>
+      <Form
+        style={{ backgroundColor: cssRole("surfaceRaised"), padding: "2rem" }}
+      >
         {}
         <CourseLanguageSelector
           selectedLanguage={selectedLanguage}
@@ -254,7 +257,10 @@ const CourseEditFormComponent = ({
           <TabSection currentTab={tab} tab={0}>
             <FormFieldGroup>
               <FormControl component="fieldset">
-                <FormLabel component="legend" style={{ color: cssRole("requiredLabel") }}>
+                <FormLabel
+                  component="legend"
+                  style={{ color: cssRole("requiredLabel") }}
+                >
                   {t("courseStatus")}*
                 </FormLabel>
                 <EnumeratingAnchor id="status" />

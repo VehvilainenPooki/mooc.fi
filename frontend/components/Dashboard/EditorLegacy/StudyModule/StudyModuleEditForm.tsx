@@ -46,9 +46,9 @@ import { EntryContainer } from "/components/Surfaces/EntryContainer"
 import { LanguageEntry } from "/components/Surfaces/LanguageEntryGrid"
 import useDebounce from "/hooks/useDebounce"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CommonTranslations from "/translations/common"
 import StudyModulesTranslations from "/translations/study-modules"
-import { cssRole } from "/src/newTheme/roles"
 
 const FormContainer = styled("div")`
   background-color: ${cssRole("surfaceRaised")};

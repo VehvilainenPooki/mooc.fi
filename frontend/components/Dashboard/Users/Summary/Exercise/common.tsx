@@ -20,6 +20,7 @@ import {
 import { styled } from "@mui/material/styles"
 
 import { iconStyle } from "../common"
+import { cssRole } from "/src/newTheme/roles"
 import { Translator } from "/translations"
 
 import {
@@ -28,7 +29,6 @@ import {
   TierProgressExerciseCompletionFieldsFragment,
   TierProgressFieldsFragment,
 } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 export type ExerciseWithCompletions = ExerciseCoreFieldsFragment & {
   exercise_completions: ExerciseCompletionCoreFieldsFragment[]

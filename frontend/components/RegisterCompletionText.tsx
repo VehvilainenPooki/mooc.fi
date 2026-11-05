@@ -5,8 +5,8 @@ import { styled } from "@mui/material/styles"
 
 import { OUTBOUND_LINK_ICON_URL } from "./OutboundLink"
 import { useTranslator } from "/hooks/useTranslator"
-import RegisterCompletionTranslations from "/translations/register-completion"
 import { cssRole } from "/src/newTheme/roles"
+import RegisterCompletionTranslations from "/translations/register-completion"
 
 // The Open University only publishes this page in Finnish and English; other languages fall
 // back to the English version.

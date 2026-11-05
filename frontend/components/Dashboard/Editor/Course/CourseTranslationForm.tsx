@@ -8,8 +8,8 @@ import { useTranslationLanguageNames } from "./translationLanguages"
 import { CourseFormValues } from "./types"
 import { EntryContainer } from "/components/Surfaces/EntryContainer"
 import { useTranslator } from "/hooks/useTranslator"
-import CoursesTranslations from "/translations/courses"
 import { cssRole } from "/src/newTheme/roles"
+import CoursesTranslations from "/translations/courses"
 
 const LanguageVersionTitle = styled(Typography)`
   margin-bottom: 1.5rem;

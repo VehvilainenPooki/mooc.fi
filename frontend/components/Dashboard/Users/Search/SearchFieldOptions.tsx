@@ -10,10 +10,10 @@ import { styled } from "@mui/material/styles"
 
 import UserSearchContext from "/contexts/UserSearchContext"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import UsersTranslations from "/translations/users"
 
 import { UserSearchField } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const OptionFormControl = styled(FormControl)`
   max-width: 50%;

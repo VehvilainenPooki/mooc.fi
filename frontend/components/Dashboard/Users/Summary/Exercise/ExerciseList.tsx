@@ -33,11 +33,11 @@ import {
   useMaterialReactTableLocalization,
 } from "/components/Dashboard/Users/Summary/common"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import ProfileTranslations from "/translations/profile"
 import { formatDateTime } from "/util/dataFormatFunctions"
 
 import { ExerciseWithExerciseCompletionsFieldsFragment } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const mapExerciseToRow =
   (locale?: string) =>
@@ -245,7 +245,9 @@ function ExerciseList({ data, loading }: ExerciseListProps) {
       ...tableProps["muiTableBodyRowProps"],
       sx: {
         ...(tableProps["muiTableBodyRowProps"] as TableRowProps)?.sx,
-        ...(row.original.max_points === 0 ? { backgroundColor: cssRole("surfaceMuted") } : {}),
+        ...(row.original.max_points === 0
+          ? { backgroundColor: cssRole("surfaceMuted") }
+          : {}),
       },
     }),
     [tableProps],

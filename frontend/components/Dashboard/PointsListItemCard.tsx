@@ -9,6 +9,7 @@ import { FormSubmitButton } from "/components/Buttons/FormSubmitButton"
 import PointsProgress from "/components/Dashboard/PointsProgress"
 import { CardSubtitle, CardTitle } from "/components/Text/headers"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import ProfileTranslations from "/translations/profile"
 import formatPointsData from "/util/formatPointsData"
 
@@ -18,7 +19,6 @@ import {
   UserCourseProgressCoreFieldsFragment,
   UserCourseServiceProgressCoreFieldsFragment,
 } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const PointsListItemCardContainer = styled(Grid)`
   background-color: ${cssRole("surfaceRaised")};

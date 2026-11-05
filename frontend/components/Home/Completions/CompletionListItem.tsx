@@ -7,6 +7,7 @@ import { Avatar, Button, Paper, PaperProps, Skeleton } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import ProfileTranslations from "/translations/profile"
 import { formatDateTime, mapLangToLanguage } from "/util/dataFormatFunctions"
 import { isDefinedAndNotEmpty } from "/util/guards"
@@ -16,7 +17,6 @@ import {
   CompletionDetailedFieldsFragment,
   UserOverviewCourseFieldsFragment,
 } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const StyledButton = styled(Button)`
   color: ${cssRole("text")};

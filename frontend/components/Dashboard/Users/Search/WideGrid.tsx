@@ -20,8 +20,8 @@ import Pagination from "./Pagination"
 import UserSearchContext from "/contexts/UserSearchContext"
 import useIsOld from "/hooks/useIsOld"
 import { useTranslator } from "/hooks/useTranslator"
-import UsersTranslations from "/translations/users"
 import { cssRole } from "/src/newTheme/roles"
+import UsersTranslations from "/translations/users"
 
 const TableWrapper = styled("div")`
   overflow-x: auto;

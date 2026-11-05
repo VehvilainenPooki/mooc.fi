@@ -7,10 +7,10 @@ import { css, styled } from "@mui/material/styles"
 
 import LoaderImage from "./LoaderImage"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CoursesTranslations from "/translations/courses"
 
 import { ImageCoreFieldsFragment } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const ImageComponentBase = css`
   width: 100%;

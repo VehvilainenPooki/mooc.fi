@@ -15,10 +15,10 @@ import { styled, useTheme } from "@mui/material/styles"
 import { CardSubtitle } from "/components/Text/headers"
 import { CardCaption } from "/components/Text/paragraphs"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CommonTranslations from "/translations/common"
 import { isDefinedAndNotEmpty } from "/util/guards"
 import round from "/util/round"
-import { cssRole } from "/src/newTheme/roles"
 
 const ProgressItem = styled("div")`
   width: 100%;

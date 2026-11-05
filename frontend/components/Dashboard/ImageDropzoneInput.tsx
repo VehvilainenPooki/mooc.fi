@@ -6,8 +6,8 @@ import { Typography } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
 import { useTranslator } from "/hooks/useTranslator"
-import CommonTranslations from "/translations/common"
 import { cssRole } from "/src/newTheme/roles"
+import CommonTranslations from "/translations/common"
 
 // Chrome only gives dragged file mimetype on drop, so all filetypes would appear rejected on drag
 const isChrome =
@@ -32,7 +32,9 @@ const DropzoneContainer = styled("div", {
   padding: 20px;
   background-color: ${() => {
     if (isDragActive) {
-      return isDragAccept ? cssRole("dropzoneAcceptBg") : cssRole("dropzoneRejectBg")
+      return isDragAccept
+        ? cssRole("dropzoneAcceptBg")
+        : cssRole("dropzoneRejectBg")
     }
     if (error) {
       return cssRole("dropzoneRejectBg")

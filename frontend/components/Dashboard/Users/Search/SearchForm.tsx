@@ -27,9 +27,9 @@ import { ButtonWithPaddingAndMargin } from "/components/Buttons/ButtonWithPaddin
 import { H1NoBackground } from "/components/Text/headers"
 import UserSearchContext from "/contexts/UserSearchContext"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import UsersTranslations from "/translations/users"
 import { isDefinedAndNotEmpty } from "/util/guards"
-import { cssRole } from "/src/newTheme/roles"
 
 const MobileGrid = dynamic(() => import("./MobileGrid"), {
   ssr: false,

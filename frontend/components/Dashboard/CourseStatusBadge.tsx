@@ -8,11 +8,11 @@ import { Chip, ChipProps } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import { KeyOfTranslationDictionary } from "/translations"
 import CoursesTranslations from "/translations/courses"
 
 import { CourseStatus } from "/graphql/generated"
-import { cssRole } from "/src/newTheme/roles"
 
 const statusColor: Record<CourseStatus & string, string> = {
   [CourseStatus.Active]: cssRole("statusActive"),
