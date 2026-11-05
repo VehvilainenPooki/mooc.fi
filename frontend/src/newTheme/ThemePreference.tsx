@@ -7,6 +7,8 @@ import React, {
   useState,
 } from "react"
 
+import { GlobalStyles } from "@mui/material"
+
 import {
   readThemePreference,
   resolveTheme,
@@ -40,6 +42,24 @@ const MUI_STORAGE_KEYS = [
   "mui-color-scheme-light",
   "mui-color-scheme-dark",
 ]
+
+// When the system asks for more contrast, muted text and soft borders use the
+// active theme's full-strength text and border colors.
+const moreContrastStyles = {
+  "@media (prefers-contrast: more)": {
+    ":root[data-mui-color-scheme]": {
+      "--mui-palette-roles-textMuted": "var(--mui-palette-roles-text)",
+      "--mui-palette-roles-textLabel": "var(--mui-palette-roles-text)",
+      "--mui-palette-roles-textSubtitle": "var(--mui-palette-roles-text)",
+      "--mui-palette-roles-textSecondary": "var(--mui-palette-roles-text)",
+      "--mui-palette-roles-border": "var(--mui-palette-roles-borderStrong)",
+      "--mui-palette-roles-borderMuted":
+        "var(--mui-palette-roles-borderStrong)",
+      "--mui-palette-roles-inputBorder":
+        "var(--mui-palette-roles-borderStrong)",
+    },
+  },
+}
 
 /** Applies the cookie preference to MUI's CSS-variables theme. Must be
  * rendered inside the CssVarsProvider. */
@@ -90,6 +110,7 @@ export function ThemePreferenceProvider({ children }: React.PropsWithChildren) {
 
   return (
     <ThemePreferenceContext.Provider value={value}>
+      <GlobalStyles styles={moreContrastStyles} />
       {children}
     </ThemePreferenceContext.Provider>
   )
