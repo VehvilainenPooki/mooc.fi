@@ -14,6 +14,10 @@ const MoocLogoWrapper = styled("div")<{ height: number }>(
   ${theme.breakpoints.up("xl")} {
     height: ${height * 2}px;
   }
+  /* The logo image is black; on a dark theme it is shown inverted. */
+  ${theme.getColorSchemeSelector("dark")} img {
+    filter: invert(1);
+  }
 `,
 )
 
