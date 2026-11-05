@@ -241,7 +241,7 @@ export const lightRoles = {
   editorHeading: "#005b5b",
   editorRemoveButton: "#88732d",
   editorBackdrop: "#8c64ac",
-  requiredLabel: "#DF7A46",
+  requiredLabel: "#C05721",
   optionalLabel: "#245B6D",
   inputBorder: "rgba(0, 0, 0, 0.23)",
   inputBorderHover: "rgba(0, 0, 0, 0.87)",
