@@ -21,6 +21,7 @@ import useSeoConfig from "/hooks/useSeoConfig"
 import useThemeWithLocale from "/hooks/useThemeWithLocale"
 import CssVarsProvider from "/lib/reexports/CssVarsProvider"
 import withApolloClient from "/lib/with-apollo-client"
+import { ThemePreferenceProvider } from "/src/newTheme/ThemePreference"
 
 interface MyAppProps extends AppProps {
   deviceType?: string
@@ -102,7 +103,7 @@ export function MyApp({ Component, pageProps, deviceType }: MyAppProps) {
       </Head>
       {isCssVarsTheme ? (
         <CssVarsProvider theme={theme} defaultMode="light">
-          {content}
+          <ThemePreferenceProvider>{content}</ThemePreferenceProvider>
         </CssVarsProvider>
       ) : (
         <ThemeProvider theme={theme}>{content}</ThemeProvider>
