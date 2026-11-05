@@ -16,6 +16,7 @@ import HyLogoIcon from "../Icons/HyLogo"
 import { NavigationMenu } from "../Navigation"
 import LanguageSwitch from "./LanguageSwitch"
 import MoocLogo from "./MoocLogo"
+import ThemeSwitch from "./ThemeSwitch"
 import { useTranslator } from "/hooks/useTranslator"
 import { fontSize } from "/src/theme/util"
 import CommonTranslations from "/translations/common"
@@ -148,6 +149,7 @@ function Header() {
             <HyLogo />
             <HyLabel>{t("hy")}</HyLabel>
           </HyLogoLink>
+          <ThemeSwitch />
           <LanguageSwitch />
         </HyToolbar>
         <GroupToolbar>
