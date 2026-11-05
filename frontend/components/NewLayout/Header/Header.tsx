@@ -48,6 +48,14 @@ const HyToolbar = styled(Toolbar)(
 `,
 )
 
+/** Keeps the theme and language switches together at the end of the top bar. */
+const HeaderSwitches = styled("div")`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+`
+
 const GroupToolbar = styled(Toolbar)(
   ({ theme }) => `
   display: flex;
@@ -149,8 +157,10 @@ function Header() {
             <HyLogo />
             <HyLabel>{t("hy")}</HyLabel>
           </HyLogoLink>
-          <ThemeSwitch />
-          <LanguageSwitch />
+          <HeaderSwitches>
+            <ThemeSwitch />
+            <LanguageSwitch />
+          </HeaderSwitches>
         </HyToolbar>
         <GroupToolbar>
           <BrandingContainer>
