@@ -43,13 +43,10 @@ const MUI_STORAGE_KEYS = [
 
 /** Applies the cookie preference to MUI's CSS-variables theme. Must be
  * rendered inside the CssVarsProvider. */
-export function ThemePreferenceProvider({
-  children,
-}: React.PropsWithChildren) {
+export function ThemePreferenceProvider({ children }: React.PropsWithChildren) {
   const { setMode, setColorScheme } = useColorScheme()
-  const [preference, setPreferenceState] = useState<ThemePreference>(
-    readThemePreference,
-  )
+  const [preference, setPreferenceState] =
+    useState<ThemePreference>(readThemePreference)
   const [activeTheme, setActiveTheme] = useState<ThemeName>(() =>
     resolveTheme(preference),
   )
