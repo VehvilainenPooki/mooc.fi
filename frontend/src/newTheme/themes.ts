@@ -4,7 +4,7 @@
 // here. The preference is kept in a cookie only: "system" (or no cookie)
 // follows the operating system's light/dark setting.
 
-export const themeNames = ["light"] as const
+export const themeNames = ["light", "dark"] as const
 export type ThemeName = (typeof themeNames)[number]
 export type ThemePreference = ThemeName | "system"
 
