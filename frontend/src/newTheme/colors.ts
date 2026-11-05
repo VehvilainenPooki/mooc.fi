@@ -1,6 +1,8 @@
 // The new theme's color values, kept free of MUI imports so tests can read
 // them. palette.tsx builds the MUI palette from these.
 
+import type { ThemeName } from "./themes"
+
 export const common = {
   brand: {
     main: "#0e688b",
@@ -273,4 +275,12 @@ export const lightRoles = {
   surfaceDisabled: common.grayscale.medium,
   textOnDisabled: common.grayscale.dark,
   appBarBorder: common.grayscale.dark,
+}
+
+export type ColorRoleValues = typeof lightRoles
+
+/** Role values of every registered theme; a theme listed in themes.ts must
+ * have an entry here. */
+export const rolesByTheme: Record<ThemeName, ColorRoleValues> = {
+  light: lightRoles,
 }
