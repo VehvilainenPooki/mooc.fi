@@ -5,6 +5,7 @@ import { DocumentProps, Head, Html, Main, NextScript } from "next/document"
 import newTheme, {
   fontVariableClass as newFontVariableClass,
 } from "/src/newTheme"
+import { themeInitScript } from "/src/newTheme/themes"
 import originalTheme, {
   fontVariableClass as originalFontVariableClass,
 } from "/src/theme"
@@ -27,6 +28,9 @@ function CustomDocument(props: DocumentProps) {
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <body>
+        {!isOld && (
+          <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        )}
         <Main />
         <NextScript />
       </body>

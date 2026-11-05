@@ -16,6 +16,7 @@ import HyLogoIcon from "../Icons/HyLogo"
 import { NavigationMenu } from "../Navigation"
 import LanguageSwitch from "./LanguageSwitch"
 import MoocLogo from "./MoocLogo"
+import ThemeSwitch from "./ThemeSwitch"
 import { useTranslator } from "/hooks/useTranslator"
 import { fontSize } from "/src/theme/util"
 import CommonTranslations from "/translations/common"
@@ -46,6 +47,14 @@ const HyToolbar = styled(Toolbar)(
   display: flex;
 `,
 )
+
+/** Keeps the theme and language switches together at the end of the top bar. */
+const HeaderSwitches = styled("div")`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+`
 
 const GroupToolbar = styled(Toolbar)(
   ({ theme }) => `
@@ -148,7 +157,10 @@ function Header() {
             <HyLogo />
             <HyLabel>{t("hy")}</HyLabel>
           </HyLogoLink>
-          <LanguageSwitch />
+          <HeaderSwitches>
+            <ThemeSwitch />
+            <LanguageSwitch />
+          </HeaderSwitches>
         </HyToolbar>
         <GroupToolbar>
           <BrandingContainer>

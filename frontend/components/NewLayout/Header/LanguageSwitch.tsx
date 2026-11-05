@@ -22,7 +22,8 @@ import { fontSize } from "/src/theme/util"
 import { KeyOfTranslationDictionary } from "/translations"
 import CommonTranslations from "/translations/common"
 
-const LanguageSwitchMenu = styled(Popover)(
+/** Header menus share these pieces, so the language and theme switches look and behave alike. */
+export const LanguageSwitchMenu = styled(Popover)(
   ({ theme }) => `
   justify-items: center;
   text-transform: uppercase;
@@ -99,14 +100,14 @@ const LanguageOptionLink = styled(Link)`
   text-decoration: none;
 ` as EnhancedLink
 
-const LanguageSwitchContainer = styled("div")`
+export const LanguageSwitchContainer = styled("div")`
   align-items: center;
   display: flex;
   height: 100%;
   position: relative;
 `
 
-const LanguageSwitchToggle = styled(ButtonBase)(
+export const LanguageSwitchToggle = styled(ButtonBase)(
   ({ theme }) => `
   color: ${theme.vars.palette.roles.textOnInverse};
   align-items: center;

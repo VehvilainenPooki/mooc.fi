@@ -82,6 +82,37 @@ const esLintConfig = {
     ],
     complexity: "warn",
   },
+  overrides: [
+    {
+      // Colors come from the theme's roles (theme.vars.palette.roles or
+      // cssRole), so every theme can give them its own value.
+      files: ["frontend/**/*.ts", "frontend/**/*.tsx"],
+      excludedFiles: [
+        "frontend/src/newTheme/colors.ts",
+        "frontend/src/theme/**",
+        "frontend/pages/_old/**",
+        "frontend/middleware.ts",
+        "frontend/**/*.test.ts",
+      ],
+      rules: {
+        "no-restricted-syntax": [
+          "warn",
+          {
+            selector:
+              "Literal[value=/^(#([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})|rgba?\\(.*\\))$/]",
+            message:
+              "Use a theme color role (theme.vars.palette.roles or cssRole) instead of a color literal.",
+          },
+          {
+            selector:
+              "TemplateElement[value.raw=/#([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})(?![\\w-])|rgba?\\(/]",
+            message:
+              "Use a theme color role (theme.vars.palette.roles or cssRole) instead of a color literal.",
+          },
+        ],
+      },
+    },
+  ],
 }
 
 module.exports = esLintConfig
