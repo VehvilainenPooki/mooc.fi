@@ -194,7 +194,7 @@ export const lightRoles = {
   tagDifficulty: scales.blue.dark1,
   tagModule: scales.purple.dark1,
   tagLanguage: scales.green.dark1,
-  textSubtitle: "gray",
+  textSubtitle: "#767676",
   textOnDanger: common.grayscale.white,
   buttonSecondaryText: "#4e4637",
   surfaceTranslucent: "rgba(255, 255, 255, 0.8)",
