@@ -1,5 +1,5 @@
 import { withComponents } from "./components"
-import { lightPalette, withPalette } from "./palette"
+import { darkPalette, lightPalette, withPalette } from "./palette"
 import { withTypography } from "./typography"
 
 import type {} from "@mui/x-date-pickers/themeAugmentation"
@@ -38,6 +38,7 @@ export const themeOptions = {
   ...omit(baseTheme, ["palette"]),
   colorSchemes: {
     light: { palette: lightPalette },
+    dark: { palette: darkPalette },
   },
 } as CssVarsThemeOptions
 
