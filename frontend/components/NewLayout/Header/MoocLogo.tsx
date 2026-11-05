@@ -17,8 +17,9 @@ const MoocLogoWrapper = styled("div")<{ height: number }>(
 `,
 )
 
-const MoocLogoLink = styled(Link)`
-  color: black;
+const MoocLogoLink = styled(Link)(
+  ({ theme }) => `
+  color: ${theme.vars.palette.roles.text};
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -26,7 +27,8 @@ const MoocLogoLink = styled(Link)`
   &:hover {
     cursor: pointer;
   }
-`
+`,
+)
 
 const MoocLogo = () => (
   <MoocLogoLink href="/" aria-label="MOOC.fi homepage">

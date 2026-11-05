@@ -106,7 +106,7 @@ const CardsContainer = styled("ul")(
 
 const FiltersContainer = styled("div")(
   ({ theme }) => `
-  background-color: ${theme.palette.common.grayscale.slightlyGray};
+  background-color: ${theme.vars.palette.roles.surfaceSubtle};
   padding-bottom: 0.5rem;
 `,
 )

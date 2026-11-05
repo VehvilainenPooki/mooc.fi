@@ -1,6 +1,8 @@
 import { Button, EnhancedButton } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
+import { cssRole } from "/src/newTheme/roles"
+
 export const Section = styled("div")`
   padding: 1.75rem 2.25rem;
 
@@ -10,7 +12,7 @@ export const Section = styled("div")`
 `
 
 export const DividedSection = styled(Section)`
-  border-top: 1px solid #ebedee;
+  border-top: 1px solid ${cssRole("panelDivider")};
 `
 
 export const InstructionsSection = styled(DividedSection)`
@@ -29,7 +31,7 @@ export const Prose = styled("p")`
   margin: 0;
   font-size: 1.0625rem;
   line-height: 1.65;
-  color: #313947;
+  color: ${cssRole("panelTextSecondary")};
 `
 
 export const QuestionText = styled("p")`
@@ -39,14 +41,14 @@ export const QuestionText = styled("p")`
   font-weight: 600;
   line-height: 1.35;
   letter-spacing: -0.005em;
-  color: #1a2333;
+  color: ${cssRole("panelText")};
 `
 
 export const QuestionHint = styled("p")`
   margin: 0;
   font-size: 0.9375rem;
   line-height: 1.5;
-  color: #535a66;
+  color: ${cssRole("panelTextMuted")};
 `
 
 export const AnswerButtons = styled("div")`
@@ -79,10 +81,10 @@ export const CallToActionButton = styled(Button)`
 export const Card = styled("div")`
   max-width: 46rem;
   margin: 2rem auto 4rem;
-  border: 1px solid #e2e4e6;
+  border: 1px solid ${cssRole("panelBorder")};
   border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 1px 3px rgba(10, 15, 23, 0.04);
+  background-color: ${cssRole("surfaceRaised")};
+  box-shadow: 0 1px 3px ${cssRole("panelShadow")};
   overflow: hidden;
 `
 
@@ -99,7 +101,7 @@ export const PageTitle = styled("h1")`
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: #1a2333;
+  color: ${cssRole("panelText")};
 `
 
 export const CourseName = styled("h2")`
@@ -108,11 +110,11 @@ export const CourseName = styled("h2")`
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.35;
-  color: #313947;
+  color: ${cssRole("panelTextSecondary")};
 `
 
 export const Credits = styled("p")`
   margin: 0;
   font-size: 0.9375rem;
-  color: #535a66;
+  color: ${cssRole("panelTextMuted")};
 `

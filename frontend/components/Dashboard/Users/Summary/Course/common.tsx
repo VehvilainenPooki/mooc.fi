@@ -22,6 +22,7 @@ import ClipboardButton from "/components/ClipboardButton"
 import { CardTitle } from "/components/Text/headers"
 import { useLoginStateContext } from "/contexts/LoginStateContext"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import ProfileTranslations from "/translations/profile"
 
 import { UserCourseSummaryCourseFieldsFragment } from "/graphql/generated"
@@ -54,7 +55,7 @@ export const CourseInfo = styled("div")`
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  background-color: #eee;
+  background-color: ${cssRole("surfaceMuted")};
 `
 
 const SkeletonStyledPaper = styled(Paper)`

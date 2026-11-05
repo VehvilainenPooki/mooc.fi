@@ -8,14 +8,15 @@ import { styled } from "@mui/material/styles"
 
 import OSSelectorButton from "./OSSelectorButton"
 import userOsContext from "/contexts/UserOSContext"
+import { cssRole } from "/src/newTheme/roles"
 
 const Container = styled("div")`
   display: flex;
   flex-direction: row;
   position: absolute;
   justify-content: center;
-  background-color: white;
-  border: 2px solid black;
+  background-color: ${cssRole("surfaceRaised")};
+  border: 2px solid ${cssRole("borderStrong")};
   left: 50%;
   transform: translateX(-50%);
   top: -3.5rem;

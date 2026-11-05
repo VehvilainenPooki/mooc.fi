@@ -6,6 +6,7 @@ import { styled } from "@mui/material/styles"
 import { StyledFieldWithAnchor, StyledTextField } from "../common"
 import { CourseFormValues } from "./types"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CoursesTranslations from "/translations/courses"
 import { mapLangToLanguage } from "/util/dataFormatFunctions"
 
@@ -20,7 +21,7 @@ const LanguageVersionTitle = styled(Typography)`
   margin-bottom: 1.5rem;
   font-size: 33px;
   line-height: 52px;
-  color: #005b5b;
+  color: ${cssRole("editorHeading")};
 ` as typeof Typography
 
 const inputLabelProps = {

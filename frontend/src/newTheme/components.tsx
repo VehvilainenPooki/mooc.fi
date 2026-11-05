@@ -14,6 +14,7 @@ import { ComponentsOverrides, createTheme, Theme } from "@mui/material/styles"
 import { themeFontSize } from "../theme/util"
 import { bodyFontDeclaration } from "./typography"
 import { LinkBehavior } from "/components/Link"
+import { cssRole } from "/src/newTheme/roles"
 
 export const withComponents = (theme: Theme) =>
   createTheme(theme, {
@@ -114,27 +115,27 @@ export const withComponents = (theme: Theme) =>
               color === "secondary"
                 ? {
                     backgroundColor: "transparent",
-                    border: `solid 2px ${theme.palette.common.brand.main}`,
-                    color: `${theme.palette.common.brand.main} !important`,
+                    border: `solid 2px ${cssRole("accent")}`,
+                    color: `${cssRole("accent")} !important`,
                     boxShadow: "none",
                     ".MuiButton-startIcon": {
-                      fill: theme.palette.common.brand.main,
+                      fill: cssRole("accent"),
                       paddingLeft: "1rem",
                       paddingRight: 0,
                     },
                     ".MuiButton-endIcon": {
-                      fill: theme.palette.common.brand.main,
+                      fill: cssRole("accent"),
                       paddingLeft: 0,
                       paddingRight: "1rem",
                     },
                     svg: {
-                      fill: theme.palette.common.brand.main,
+                      fill: cssRole("accent"),
                     },
                     "&:hover": {
-                      border: `solid 2px ${theme.palette.common.brand.active}`,
-                      color: `${theme.palette.common.brand.active} !important`,
+                      border: `solid 2px ${cssRole("accentHover")}`,
+                      color: `${cssRole("accentHover")} !important`,
                       svg: {
-                        fill: theme.palette.common.brand.active,
+                        fill: cssRole("accentHover"),
                         backgroundColor: "inherit",
                       },
                       textDecoration: "underline",
@@ -142,53 +143,53 @@ export const withComponents = (theme: Theme) =>
                       boxShadow: "none",
                     },
                     "&:active": {
-                      border: `solid 2px ${theme.palette.common.brand.dark}`,
-                      color: theme.palette.common.brand.dark,
+                      border: `solid 2px ${cssRole("accentPressed")}`,
+                      color: cssRole("accentPressed"),
                       svg: {
-                        fill: theme.palette.common.brand.dark,
+                        fill: cssRole("accentPressed"),
                       },
                     },
                     ".Mui-disabled": {
-                      border: `solid 2px ${theme.palette.common.grayscale.mediumDark}`,
-                      color: theme.palette.common.grayscale.mediumDark,
+                      border: `solid 2px ${cssRole("textDisabled")}`,
+                      color: cssRole("textDisabled"),
                       svg: {
-                        fill: theme.palette.common.grayscale.mediumDark,
+                        fill: cssRole("textDisabled"),
                       },
                     },
                   }
                 : {
-                    backgroundColor: theme.palette.common.brand.main,
-                    color: `${theme.palette.common.grayscale.white} !important`,
+                    backgroundColor: cssRole("accent"),
+                    color: `${cssRole("textOnAccent")} !important`,
                     ".MuiButton-startIcon": {
                       padding: "8px 13px",
-                      fill: theme.palette.common.grayscale.white,
+                      fill: cssRole("textOnAccent"),
                     },
                     ".MuiButton-endIcon": {
                       padding: "8px 12px 8px 13px",
-                      fill: theme.palette.common.grayscale.white,
+                      fill: cssRole("textOnAccent"),
                     },
                     svg: {
-                      fill: theme.palette.common.grayscale.white,
-                      backgroundColor: theme.palette.common.brand.main,
+                      fill: cssRole("textOnAccent"),
+                      backgroundColor: cssRole("accent"),
                     },
                     "&:hover": {
-                      backgroundColor: theme.palette.common.brand.active,
+                      backgroundColor: cssRole("accentHover"),
                     },
                     "&:active": {
-                      backgroundColor: theme.palette.common.brand.dark,
+                      backgroundColor: cssRole("accentPressed"),
                     },
                     ".Mui-disabled": {
-                      backgroundColor: theme.palette.common.grayscale.medium,
-                      color: theme.palette.common.grayscale.dark,
+                      backgroundColor: cssRole("surfaceDisabled"),
+                      color: cssRole("textOnDisabled"),
                       svg: {
-                        fill: theme.palette.common.grayscale.dark,
+                        fill: cssRole("textOnDisabled"),
                       },
                       "&::after": {
                         bottom: "-2px",
                       },
                     },
                     /*"&:focus": {
-                      outline: `solid 2px ${theme.palette.common.additional.yellow.main}`,
+                      outline: `solid 2px ${cssRole("focusRing")}`,
                       outlineOffset: "2px",
                     },*/
                     "&::after": {
@@ -250,12 +251,12 @@ export const withComponents = (theme: Theme) =>
                 fontSize: "13px",
               },
             },
-            backgroundColor: theme.palette.common.brand.main,
-            color: theme.palette.common.grayscale.white,
+            backgroundColor: cssRole("accent"),
+            color: cssRole("textOnAccent"),
             "&::after": {
               content: '""',
               display: "block",
-              borderBottom: `2px solid ${theme.palette.common.additional.skyblue}`,
+              borderBottom: `2px solid ${cssRole("dividerOnAccent")}`,
               position: "absolute",
               bottom: "-3.5px",
               left: "3px",
@@ -265,7 +266,7 @@ export const withComponents = (theme: Theme) =>
             "&:disabled": {
               cursor: "not-allowed",
               "&::after": {
-                borderBottom: `2px solid ${theme.palette.common.grayscale.mediumDark}`,
+                borderBottom: `2px solid ${cssRole("textDisabled")}`,
                 bottom: "-3.5px",
               },
             },
@@ -280,12 +281,12 @@ export const withComponents = (theme: Theme) =>
           root: {
             height: "auto",
             minHeight: "131px",
-            backgroundColor: theme.palette.common.grayscale.white,
+            backgroundColor: cssRole("surfaceRaised"),
             zIndex: 100,
-            borderBottom: `2px solid ${theme.palette.common.grayscale.dark}`,
+            borderBottom: `2px solid ${cssRole("appBarBorder")}`,
             transform: "none",
             [theme.breakpoints.up("lg")]: {
-              borderBottom: `1px solid ${theme.palette.common.grayscale.black}`,
+              borderBottom: `1px solid ${cssRole("borderStrong")}`,
               margin: "0 auto",
               maxWidth: "7680px",
             },

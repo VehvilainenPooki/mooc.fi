@@ -16,6 +16,7 @@ import { useEventCallback } from "@mui/material/utils"
 import { ControlledSelect } from "../Common/Fields"
 import ContainedImage from "/components/Images/ContainedImage"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CoursesTranslations from "/translations/courses"
 import { addDomain } from "/util/imageUtils"
 
@@ -39,7 +40,7 @@ const ImageContainer = styled("div")`
 const ImagePlaceholder = styled("div")`
   width: 350px;
   height: 250px;
-  background-color: #eeeeee;
+  background-color: ${cssRole("surfaceNote")};
 `
 
 interface ImportPhotoDialogProps {

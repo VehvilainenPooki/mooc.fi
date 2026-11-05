@@ -8,13 +8,14 @@ import { CourseFormValues, CourseTranslationFormValues } from "./types"
 import { EntryContainer } from "/components/Surfaces/EntryContainer"
 import { LanguageEntry } from "/components/Surfaces/LanguageEntryGrid"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CoursesTranslations from "/translations/courses"
 
 const AddTranslationNotice = styled(EntryContainer)`
   margin-bottom: 1rem;
-  border: 1px solid #88732d;
-  background-color: #88732d;
-  color: white;
+  border: 1px solid ${cssRole("editorRemoveButton")};
+  background-color: ${cssRole("editorRemoveButton")};
+  color: ${cssRole("textOnAccent")};
 `
 
 const CourseTranslationEditForm = () => {

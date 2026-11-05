@@ -10,6 +10,7 @@ import { styled } from "@mui/material/styles"
 
 import UserSearchContext from "/contexts/UserSearchContext"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import UsersTranslations from "/translations/users"
 
 import { UserSearchField } from "/graphql/generated"
@@ -21,7 +22,7 @@ const OptionFormControl = styled(FormControl)`
 const OptionFormGroup = styled(FormGroup)`
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid rgba(0, 0, 0, 0.23);
+  border: 1px solid ${cssRole("inputBorder")};
   padding: 0.5rem;
   border-radius: 4px;
 

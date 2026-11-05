@@ -2,10 +2,11 @@ import { Card } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
 import { H1NoBackground, SubtitleNoBackground } from "/components/Text/headers"
+import { cssRole } from "/src/newTheme/roles"
 
 const RedBackground = styled(Card)`
-  background-color: #822900;
-  color: white;
+  background-color: ${cssRole("surfaceWarningStrong")};
+  color: ${cssRole("textOnInverse")};
 `
 const NoOsMessage = () => {
   return (

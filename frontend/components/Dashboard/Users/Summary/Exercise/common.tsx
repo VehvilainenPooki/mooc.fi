@@ -20,6 +20,7 @@ import {
 import { styled } from "@mui/material/styles"
 
 import { iconStyle } from "../common"
+import { cssRole } from "/src/newTheme/roles"
 import { Translator } from "/translations"
 
 import {
@@ -417,7 +418,7 @@ export const useExerciseListProps = <T extends Record<string, any>>() => {
             margin: "0.5rem",
             width: "unset",
             flexDirection: "column",
-            border: "1px solid rgba(224, 224, 244, 1)",
+            border: `1px solid ${cssRole("tableBorder")}`,
             borderRadius: "4px",
             padding: "0.5rem",
           }),
@@ -431,7 +432,7 @@ export const useExerciseListProps = <T extends Record<string, any>>() => {
       muiTableBodyCellProps: {
         sx: {
           ...(!isWide && {
-            borderBottom: "1px solid rgba(224, 224, 244, 1)",
+            borderBottom: `1px solid ${cssRole("tableBorder")}`,
             width: "100%",
             ":first-of-type": {
               display: "none",

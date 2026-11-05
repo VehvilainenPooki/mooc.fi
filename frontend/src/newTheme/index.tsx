@@ -1,15 +1,20 @@
 import { withComponents } from "./components"
-import { withPalette } from "./palette"
+import { lightPalette, withPalette } from "./palette"
 import { withTypography } from "./typography"
 
 import type {} from "@mui/x-date-pickers/themeAugmentation"
 import type {} from "@mui/lab/themeAugmentation"
+import type {} from "@mui/material/themeCssVarsAugmentation"
 
-import { pipe } from "remeda"
+import { omit, pipe } from "remeda"
 
-import { createTheme } from "@mui/material/styles"
+import {
+  createTheme,
+  CssVarsThemeOptions,
+  experimental_extendTheme as extendTheme,
+} from "@mui/material/styles"
 
-let theme = createTheme({
+let baseTheme = createTheme({
   breakpoints: {
     values: {
       xxxs: 0,
@@ -25,7 +30,18 @@ let theme = createTheme({
   },
 })
 
-theme = pipe(theme, withPalette, withTypography, withComponents)
+baseTheme = pipe(baseTheme, withPalette, withTypography, withComponents)
+
+// Colors live in color schemes and are emitted as CSS variables by
+// Experimental_CssVarsProvider. Add more schemes next to `light`.
+export const themeOptions = {
+  ...omit(baseTheme, ["palette"]),
+  colorSchemes: {
+    light: { palette: lightPalette },
+  },
+} as CssVarsThemeOptions
+
+const theme = extendTheme(themeOptions)
 
 export { fontVariableClass } from "./typography"
 export default theme

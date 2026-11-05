@@ -70,7 +70,7 @@ const MobileMenuButton = styled(ButtonBase)(
     align-items: center;
     background-color: transparent;
     border: none;
-    color: ${theme.palette.common.brand.main};
+    color: ${theme.vars.palette.roles.accent};
     display: inline-flex;
     height: auto;
     letter-spacing: -0.3px;
@@ -85,7 +85,7 @@ const MobileMenuButton = styled(ButtonBase)(
 
     svg {
       margin-left: 8px;
-      fill: ${theme.palette.common.brand.main};
+      fill: ${theme.vars.palette.roles.accent};
     }
     &:hover {
       background-color: transparent;
@@ -112,7 +112,7 @@ const MobileMenuLevelContainer = styled("div", {
   shouldForwardProp: (prop) => prop !== "isOpen" && prop !== "level",
 })<MobileMenuLevelProps>(
   ({ theme, isOpen, level = 0 }) => `
-  background-color: ${theme.palette.common.grayscale.white};
+  background-color: ${theme.vars.palette.background.paper};
   display: block;
   height: 80vh;
   left: 0;
@@ -166,7 +166,7 @@ const MobileMenuListItem = styled("li", {
   display: flex;
   padding: 0;
 
-  background-color: ${theme.palette.common.grayscale.white};
+  background-color: ${theme.vars.palette.background.paper};
   transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
   ${isHidden ? `visibility: hidden !important;` : "visibility: visible;"};
 
@@ -174,16 +174,16 @@ const MobileMenuListItem = styled("li", {
     svg {
       color: ${
         isActive
-          ? theme.palette.common.grayscale.black
-          : theme.palette.common.brand.main
+          ? theme.vars.palette.roles.text
+          : theme.vars.palette.roles.accent
       };
     }
     ${fontSize(21, 28)}
     font-weight: 700;
     color: ${
       isActive
-        ? theme.palette.common.grayscale.black
-        : theme.palette.common.brand.light
+        ? theme.vars.palette.roles.text
+        : theme.vars.palette.roles.navLink
     };
     letter-spacing: -0.42px;
     padding: 16px 0 16px 16px;
@@ -200,9 +200,7 @@ const MobileMenuListItem = styled("li", {
     width: 100%;
     padding: 12px 16px;
     color: ${
-      isActive
-        ? theme.palette.common.grayscale.black
-        : theme.palette.common.brand.main
+      isActive ? theme.vars.palette.roles.text : theme.vars.palette.roles.accent
     };
   }
 ${
@@ -210,7 +208,7 @@ ${
     ? css`
         position: relative;
         &:before {
-          border-left: 3px solid ${theme.palette.common.grayscale.black};
+          border-left: 3px solid ${theme.vars.palette.roles.borderStrong};
           content: "";
           height: 75%;
           left: 10px;
@@ -225,7 +223,7 @@ ${
   &.Mui-selected {
     background-color: transparent;
     .MuiListItemText-primary {
-      color: ${theme.palette.common.grayscale.dark};
+      color: ${theme.vars.palette.roles.textMuted};
     }
   }
 `,
@@ -242,7 +240,7 @@ const MobileMenuListItemButton = styled(ListItemButton)`
 const MobileMenuListItemSubmenuButton = styled(ButtonBase)(
   ({ theme }) => `
   &:before {
-    background-color: ${theme.palette.common.grayscale.medium};
+    background-color: ${theme.vars.palette.roles.border};
     width: 1px;
     height: 32px;
     content: '';
@@ -263,7 +261,7 @@ const MobileMenuBreadcrumbButton = styled(ButtonBase)(
   ({ theme }) => `
   text-transform: none;
   ${fontSize(15, 22)}
-  color: ${theme.palette.common.brand.light};
+  color: ${theme.vars.palette.roles.navLink};
   align-items: center;
   background-color: transparent;
   border: 0 none;
@@ -279,7 +277,7 @@ const MobileMenuBreadcrumbButton = styled(ButtonBase)(
 
   svg {
     margin-right: 8px;
-    fill: ${theme.palette.common.grayscale.black};
+    fill: ${theme.vars.palette.roles.text};
   }
 `,
 ) as typeof ButtonBase
@@ -297,7 +295,7 @@ const MobileMenuShortcutsContainer = styled("div")(
   h2 {
     ${fontSize(18, 24)}
     font-weight: 700;
-    color: ${theme.palette.common.grayscale.black};
+    color: ${theme.vars.palette.roles.text};
     letter-spacing: -0.32px;
     margin: 0 15px 8px;
     padding: 16px;
@@ -318,7 +316,7 @@ const MobileMenuShortcutsListItemButton = styled(ListItemButton)(
   ${fontSize(16, 20)}
   font-weight: 600;
   align-items: center;
-  color: ${theme.palette.common.brand.main};
+  color: ${theme.vars.palette.roles.accent};
   display: flex;
   letter-spacing: -0.5px;
   text-decoration: none;
@@ -326,7 +324,7 @@ const MobileMenuShortcutsListItemButton = styled(ListItemButton)(
   padding: 12px 16px;
 
   &:focus {
-    outline: solid 2px ${theme.palette.common.additional.yellow.main};
+    outline: solid 2px ${theme.vars.palette.roles.focusRing};
     outline-offset: -2px;
   }
 
@@ -337,7 +335,7 @@ const MobileMenuShortcutsListItemButton = styled(ListItemButton)(
 
   span {
     svg {
-      fill: ${theme.palette.common.brand.main};
+      fill: ${theme.vars.palette.roles.accent};
       display: inline-flex !imporant;
       margin-left: 6px;
       margin-right: 0;

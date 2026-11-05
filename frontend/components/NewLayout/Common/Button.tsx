@@ -29,12 +29,14 @@ const EnhancedMUIButton = styled(MUIButton)(
             ${ButtonText} {
               margin: 12px 0 12px 16px;
               padding-right: 16px;
-              border-right: solid 1px ${theme.palette.common.additional.skyblue};
+              border-right: solid 1px
+                ${theme.vars.palette.roles.dividerOnAccent};
             }
             ,
             &.Mui-disabled {
               ${ButtonText} {
-                border-right: solid 1px ${theme.palette.common.grayscale.dark};
+                border-right: solid 1px
+                  ${theme.vars.palette.roles.borderDisabled};
               }
             }
           `.styles
@@ -56,11 +58,12 @@ const EnhancedMUIButton = styled(MUIButton)(
             ${ButtonText} {
               margin: 12px 16px 12px 0;
               padding-left: 16px;
-              border-left: solid 1px ${theme.palette.common.additional.skyblue};
+              border-left: solid 1px ${theme.vars.palette.roles.dividerOnAccent};
             }
             &.Mui-disabled {
               ${ButtonText} {
-                border-left: solid 1px ${theme.palette.common.grayscale.dark};
+                border-left: solid 1px
+                  ${theme.vars.palette.roles.borderDisabled};
               }
             }
           `.styles

@@ -13,6 +13,7 @@ import { CardTitle } from "/components/Text/headers"
 import { useFilterContext } from "/contexts/FilterContext"
 import useIsOld from "/hooks/useIsOld"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CoursesTranslations from "/translations/courses"
 import { formatDateTime } from "/util/dataFormatFunctions"
 
@@ -22,14 +23,15 @@ const CardBase = styled("div", {
   shouldForwardProp: (prop) => prop !== "isHidden",
 })<{ isHidden?: boolean | null }>`
   position: relative;
-  box-shadow: 18px 7px 28px -12px rgba(0, 0, 0, 0.41);
+  box-shadow: 18px 7px 28px -12px ${cssRole("shadowRaised")};
 
   &:hover {
-    box-shadow: 18px 7px 48px -12px rgba(0, 0, 0, 1);
+    box-shadow: 18px 7px 48px -12px ${cssRole("shadowRaisedHover")};
     transition-duration: 0.4s;
   }
 
-  background-color: ${(props) => (props.isHidden ? "#E0E0E0" : "#FFFFFF")};
+  background-color: ${(props) =>
+    props.isHidden ? cssRole("surfaceHidden") : cssRole("surfaceRaised")};
   height: 100%;
   width: 100%;
   min-width: 340px;
@@ -146,7 +148,7 @@ const CreateCourseIconContainer = styled("div")`
   justify-content: center;
   align-items: center;
   height: 100%;
-  border: 1px solid #e0e0e0;
+  border: 1px solid ${cssRole("borderLight")};
 `
 
 interface CourseInfoProps {

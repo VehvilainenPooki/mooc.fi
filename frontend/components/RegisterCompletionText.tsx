@@ -5,6 +5,7 @@ import { styled } from "@mui/material/styles"
 
 import { OUTBOUND_LINK_ICON_URL } from "./OutboundLink"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import RegisterCompletionTranslations from "/translations/register-completion"
 
 // The Open University only publishes this page in Finnish and English; other languages fall
@@ -24,7 +25,7 @@ const InstructionText = styled(Typography)`
   margin: 0;
   font-size: 1.0625rem;
   line-height: 1.65;
-  color: #313947;
+  color: ${cssRole("panelTextSecondary")};
 ` as typeof Typography
 
 const RegistrationLinkButton = styled(Button)`
@@ -47,7 +48,7 @@ const TierName = styled(Typography)`
   margin: 0;
   font-size: 1.0625rem;
   font-weight: 600;
-  color: #1a2333;
+  color: ${cssRole("panelText")};
 ` as typeof Typography
 
 /* Painted through a mask rather than as a background image so the icon takes the label colour;

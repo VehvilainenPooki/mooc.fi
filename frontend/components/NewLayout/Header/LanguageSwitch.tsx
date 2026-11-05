@@ -38,7 +38,7 @@ const LanguageSwitchMenu = styled(Popover)(
     width: max-content;
     padding: 10px;
     border-radius: 0 0 5px 5px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 10px;
+    box-shadow: ${theme.vars.palette.roles.shadow} 0px 10px 10px;
     min-width: 160px;
   }
 
@@ -53,13 +53,13 @@ const LanguageSwitchMenuList = styled("ul")(
   gap: 4px;
 
   .Mui-selected {
-    color: ${theme.palette.common.grayscale.black};
+    color: ${theme.vars.palette.roles.text};
     background-color: transparent;
-    border: 2px solid ${theme.palette.common.grayscale.black};
+    border: 2px solid ${theme.vars.palette.roles.borderStrong};
 
     &:hover {
-      color: ${theme.palette.common.grayscale.black};
-      background-color: ${theme.palette.common.grayscale.backgroundBox};
+      color: ${theme.vars.palette.roles.text};
+      background-color: ${theme.vars.palette.roles.surfaceHover};
     }
   }
 
@@ -69,20 +69,20 @@ const LanguageOption = styled(ListItem)(
   ({ theme }) => `
   margin: 0;
   padding: 0;
-  color: ${theme.palette.common.brand.light};
+  color: ${theme.vars.palette.roles.navLink};
    
   &:hover {
-    color: ${theme.palette.common.brand.main};
-    background-color: ${theme.palette.common.grayscale.backgroundBox};
+    color: ${theme.vars.palette.roles.accent};
+    background-color: ${theme.vars.palette.roles.surfaceHover};
   }
 
   &.Mui-selected {
-    color: ${theme.palette.common.grayscale.black};
+    color: ${theme.vars.palette.roles.text};
     background-color: transparent;
-    border: 2px solid ${theme.palette.common.grayscale.black};
+    border: 2px solid ${theme.vars.palette.roles.borderStrong};
 
     &:hover {
-      background-color: ${theme.palette.common.grayscale.backgroundBox};
+      background-color: ${theme.vars.palette.roles.surfaceHover};
     }
   }
 `,
@@ -108,7 +108,7 @@ const LanguageSwitchContainer = styled("div")`
 
 const LanguageSwitchToggle = styled(ButtonBase)(
   ({ theme }) => `
-  color: ${theme.palette.common.grayscale.white};
+  color: ${theme.vars.palette.roles.textOnInverse};
   align-items: center;
   background-color: transparent;
   border: 0;
@@ -125,14 +125,14 @@ const LanguageSwitchToggle = styled(ButtonBase)(
   ${fontSize(16, 16)}
 
   svg {
-    fill: ${theme.palette.common.grayscale.white};
+    fill: ${theme.vars.palette.roles.textOnInverse};
   }
   svg:first-of-type {
     display: none !important;
   }
 
   &:focus-visible {
-    outline: solid 2px ${theme.palette.common.additional.yellow.main};
+    outline: solid 2px ${theme.vars.palette.roles.focusRing};
     outline-offset: 2px;
   }
   ${theme.breakpoints.up("lg")} {
@@ -151,7 +151,7 @@ const LanguageSwitchToggle = styled(ButtonBase)(
     border-bottom: 0;
   }
   &:hover {
-    background-color: rgba(255, 255, 255, 0.24);
+    background-color: ${theme.vars.palette.roles.surfaceInverseHover};
     text-decoration: underline;
     cursor: pointer;
     border: 0;
@@ -167,7 +167,7 @@ const LanguageSwitchToggle = styled(ButtonBase)(
       right: 0;
       bottom: -1px;
       left: 0;
-      background-color: ${theme.palette.common.grayscale.black};
+      background-color: ${theme.vars.palette.roles.surfaceInverse};
     }
   }
 `,

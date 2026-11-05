@@ -4,6 +4,7 @@ import { LinearProgress } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import ProfileTranslations from "/translations/profile"
 import { FormattedGroupPoints } from "/util/formatPointsData"
 import round from "/util/round"
@@ -31,12 +32,12 @@ const ColoredProgressBar = styled(LinearProgress)`
   margin-left: 0.5rem;
   padding: 0.5rem;
   flex: 1;
-  background-color: #f5f5f5;
+  background-color: ${cssRole("progressTrack")};
   & .MuiLinearProgress-barColorPrimary {
-    background-color: #3066c0;
+    background-color: ${cssRole("progressFill")};
   }
   & .MuiLinearProgress-barColorSecondary {
-    background-color: #789fff;
+    background-color: ${cssRole("progressFillSecondary")};
   }
 `
 

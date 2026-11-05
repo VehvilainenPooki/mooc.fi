@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles"
 
 import ContainedImage from "../Images/ContainedImage"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CoursesTranslations from "/translations/courses"
 
 const CloseButton = styled(ButtonBase)`
@@ -13,19 +14,19 @@ const CloseButton = styled(ButtonBase)`
   padding: 2px 6px 3px;
   text-decoration: none;
   font: 700 21px/20px sans-serif;
-  background: #555;
-  border: 3px solid #fff;
-  color: #fff;
+  background: ${cssRole("overlayButton")};
+  border: 3px solid ${cssRole("borderOnInverse")};
+  color: ${cssRole("textOnInverse")};
   box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.5),
-    inset 0 2px 4px rgba(0, 0, 0, 0.3);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    0 2px 6px ${cssRole("overlayShadow")},
+    inset 0 2px 4px ${cssRole("overlayShadowInset")};
+  text-shadow: 0 1px 2px ${cssRole("overlayShadow")};
   -webkit-transition: background 0.5s;
   transition: background 0.5s;
   margin-bottom: 2px;
 
   :hover {
-    background: #e54e4e;
+    background: ${cssRole("overlayButtonDanger")};
     padding: 3px 7px 5px;
     margin-bottom: -1px;
     top: -11px;
@@ -33,7 +34,7 @@ const CloseButton = styled(ButtonBase)`
   }
 
   :active {
-    background: #e54e4e;
+    background: ${cssRole("overlayButtonDanger")};
     top: -10px;
     right: 210x;
   }

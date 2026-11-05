@@ -3,6 +3,8 @@ import React from "react"
 import { Typography } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
+import { getRoles } from "/src/newTheme/roles"
+
 export const H1NoBackground = styled(Typography)`
   padding-top: 0.7em;
   padding-bottom: 0.7em;
@@ -27,7 +29,8 @@ export const SubtitleNoBackground = styled(Typography)`
   font-size: 2em;
 ` as typeof Typography
 
-export const H1Background = styled(Typography)`
+export const H1Background = styled(Typography)(
+  ({ theme }) => `
   margin-left: auto;
   margin-right: auto;
   padding-top: 0.7em;
@@ -36,9 +39,10 @@ export const H1Background = styled(Typography)`
   padding-right: 1.5rem;
   margin-top: 1em;
   margin-bottom: 0.7em;
-  background-color: white;
+  background-color: ${(theme.vars ?? theme).palette.background.paper};
   width: 45%;
-` as typeof Typography
+`,
+) as typeof Typography
 
 interface TitleProps {
   fontcolor: string
@@ -79,23 +83,27 @@ interface SubTitleProps {
 
 export const SubtitleBackground = styled(Typography, {
   shouldForwardProp: (prop) => prop !== "fontcolor",
-})<SubTitleProps & { component?: React.ElementType }>`
+})<SubTitleProps & { component?: React.ElementType }>(
+  ({ theme, fontcolor }) => `
   margin: 0rem auto 3rem auto;
   padding: 1rem;
   display: table;
-  background-color: white;
+  background-color: ${(theme.vars ?? theme).palette.background.paper};
   font-family: var(--body-font);
   font-weight: 450;
-  ${(props) => `color: ${props.fontcolor ?? "black"};`}
-`
+  color: ${fontcolor ?? getRoles(theme).text};
+`,
+)
 
-export const CardTitle = styled(Typography)`
+export const CardTitle = styled(Typography)(
+  ({ theme }) => `
   margin-top: 0.5rem;
   margin-bottom: 0.3rem;
   margin-left: 0.1rem;
   margin-right: 0.1rem;
-  color: black;
-` as typeof Typography
+  color: ${getRoles(theme).text};
+`,
+) as typeof Typography
 
 export const CardSubtitle = styled(Typography)(
   ({ theme }) => `
@@ -103,7 +111,7 @@ export const CardSubtitle = styled(Typography)(
   margin-bottom: 0.3rem;
   margin-left: 0.1rem;
   margin-right: 0.1rem;
-  color: gray;
+  color: ${getRoles(theme).textSubtitle};
   font-family: ${theme.typography.subtitle1.fontFamily}; 
   font-stretch: ${theme.typography.subtitle1.fontStretch};
 `,

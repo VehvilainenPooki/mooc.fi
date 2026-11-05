@@ -4,7 +4,9 @@ import ErrorIcon from "@mui/icons-material/Error"
 import InfoIcon from "@mui/icons-material/Info"
 import WarningIcon from "@mui/icons-material/Warning"
 import { IconButton, Snackbar, SnackbarCloseReason } from "@mui/material"
-import { styled } from "@mui/material/styles"
+import { styled, useTheme } from "@mui/material/styles"
+
+import { getRoles } from "/src/newTheme/roles"
 
 interface CustomSnackbarProps {
   open: boolean
@@ -20,15 +22,15 @@ const typeIcon = {
   info: InfoIcon,
 }
 
-const bgColor: Record<keyof typeof typeIcon, string> = {
-  success: "#43a047",
-  warning: "#ffa000",
-  error: "#d32f2f",
-  info: "#3f51b5",
-}
-
 const CustomSnackbar = (props: CustomSnackbarProps) => {
   const { open, setOpen, type, message } = props
+  const roles = getRoles(useTheme())
+  const bgColor: Record<keyof typeof typeIcon, string> = {
+    success: roles.successFill,
+    warning: roles.warningFill,
+    error: roles.dangerFill,
+    info: roles.infoFill,
+  }
   const Icon = typeIcon[type]
   const StyledIcon = styled(Icon)`
     opacity: 0.9;

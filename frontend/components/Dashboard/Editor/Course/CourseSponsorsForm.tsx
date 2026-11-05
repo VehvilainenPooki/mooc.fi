@@ -24,6 +24,7 @@ import BorderedSection from "/components/BorderedSection"
 import ContainedImage from "/components/Images/ContainedImage"
 import { useAnchor } from "/hooks/useAnchors"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import CoursesTranslations from "/translations/courses"
 
 const hasName = (sponsor: SponsorFormValue) => !!sponsor.name
@@ -40,9 +41,9 @@ const Placeholder = styled("div")`
   height: 100%;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ccc;
+  border: 1px solid ${cssRole("placeholderMuted")};
   border-radius: 4px;
-  color: #ccc;
+  color: ${cssRole("placeholderMuted")};
 `
 
 const SponsorSmallLogoContainer = styled("div")`
@@ -61,7 +62,7 @@ const StyledBorderedSection = styled(BorderedSection)`
   .header {
     .headerTitle {
       font-weight: 400;
-      color: rgba(0, 0, 0, 0.6);
+      color: ${cssRole("textSecondary")};
       font-size: 0.7rem;
     }
 

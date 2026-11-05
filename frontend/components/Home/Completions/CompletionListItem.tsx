@@ -7,6 +7,7 @@ import { Avatar, Button, Paper, PaperProps, Skeleton } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import ProfileTranslations from "/translations/profile"
 import { formatDateTime, mapLangToLanguage } from "/util/dataFormatFunctions"
 import { isDefinedAndNotEmpty } from "/util/guards"
@@ -18,7 +19,7 @@ import {
 } from "/graphql/generated"
 
 const StyledButton = styled(Button)`
-  color: black;
+  color: ${cssRole("text")};
   text-align: center;
   max-width: 20vw;
 `
@@ -41,7 +42,7 @@ interface CompletionListItemProps {
 }
 
 const ListItemContainer = styled(Paper)`
-  background-color: white;
+  background-color: ${cssRole("surfaceRaised")};
   margin-bottom: 1rem;
   width: 100%;
   align-items: center;

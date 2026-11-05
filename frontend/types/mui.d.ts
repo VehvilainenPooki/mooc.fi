@@ -181,6 +181,155 @@ declare module "@mui/material/styles" {
     red?: PaletteOptions["primary"]
     yellow?: PaletteOptions["primary"]
   }
+
+  // Semantic color roles of the new theme. Every color scheme gives all of them
+  // a value; leaf code reads them as theme.vars.palette.roles.*
+  interface ColorRoles {
+    surfaceRaised: string
+    surfaceSunken: string
+    surfaceHover: string
+    surfaceInverse: string
+    surfaceInverseHover: string
+    surfaceInverseBorder: string
+    text: string
+    textHeading: string
+    textMuted: string
+    textDisabled: string
+    textOnAccent: string
+    textOnInverse: string
+    textOnInverseMuted: string
+    border: string
+    borderStrong: string
+    borderOnInverse: string
+    link: string
+    linkDisabled: string
+    navText: string
+    navLink: string
+    focusRing: string
+    accent: string
+    accentHover: string
+    accentPressed: string
+    shadow: string
+    accentAlt: string
+    accentStrong: string
+    accentOnFill: string
+    borderOnAccent: string
+    borderSubtle: string
+    borderDisabled: string
+    dividerOnAccent: string
+    separator: string
+    surfaceSubtle: string
+    surfaceHighlight: string
+    textStrong: string
+    textSubtle: string
+    textLabel: string
+    textOnAccentHover: string
+    shadowSoft: string
+    cardShadow: string
+    skeleton: string
+    skeletonSoft: string
+    imagePlaceholder: string
+    courseCyberSecurity: string
+    courseProgramming: string
+    courseCloud: string
+    courseAi: string
+    courseOther: string
+    moduleCyberSecurity: string
+    moduleProgramming: string
+    moduleCloud: string
+    moduleAi: string
+    moduleOther: string
+    tagOther: string
+    tagDifficulty: string
+    tagModule: string
+    tagLanguage: string
+    textSubtitle: string
+    textOnDanger: string
+    buttonSecondaryText: string
+    surfaceTranslucent: string
+    borderMuted: string
+    entryBorder: string
+    shadowRaised: string
+    shadowRaisedHover: string
+    tooltipSurface: string
+    tooltipBorder: string
+    tooltipIcon: string
+    tooltipIconHover: string
+    danger: string
+    successFill: string
+    warningFill: string
+    dangerFill: string
+    infoFill: string
+    infoFg: string
+    infoBg: string
+    infoBorder: string
+    infoText: string
+    codeSurface: string
+    surfaceAttention: string
+    surfaceNote: string
+    surfaceWarningStrong: string
+    accentBright: string
+    codeSurfaceTinted: string
+    imageBackdrop: string
+    imageFallback: string
+    certificateButton: string
+    noticeDangerBg: string
+    panelBorder: string
+    panelDivider: string
+    panelText: string
+    panelTextSecondary: string
+    panelTextMuted: string
+    panelShadow: string
+    dangerHighlight: string
+    dangerText: string
+    dangerStrong: string
+    textSecondary: string
+    placeholderMuted: string
+    chipSurface: string
+    editorSectionRule: string
+    editorHeading: string
+    editorRemoveButton: string
+    editorBackdrop: string
+    requiredLabel: string
+    optionalLabel: string
+    inputBorder: string
+    inputBorderHover: string
+    tabSurface: string
+    tabSurfaceHover: string
+    tabSurfaceActive: string
+    tabShadow: string
+    tabInnerGlow: string
+    tabUnderline: string
+    dropzoneAcceptBg: string
+    dropzoneRejectBg: string
+    dropzoneAccept: string
+    overlayButton: string
+    overlayButtonDanger: string
+    overlayShadow: string
+    overlayShadowInset: string
+    surfaceHidden: string
+    surfaceMuted: string
+    borderLight: string
+    listDivider: string
+    tableBorder: string
+    iconAccent: string
+    statusActive: string
+    statusUpcoming: string
+    statusEnded: string
+    progressTrack: string
+    progressFill: string
+    progressFillSecondary: string
+    surfaceDisabled: string
+    textOnDisabled: string
+    appBarBorder: string
+  }
+  interface Palette {
+    roles: ColorRoles
+  }
+  interface PaletteOptions {
+    roles?: ColorRoles
+  }
+
   interface PaletteColor {
     light1?: string
     light2?: string

@@ -27,6 +27,7 @@ import { ButtonWithPaddingAndMargin } from "/components/Buttons/ButtonWithPaddin
 import { H1NoBackground } from "/components/Text/headers"
 import UserSearchContext from "/contexts/UserSearchContext"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import UsersTranslations from "/translations/users"
 import { isDefinedAndNotEmpty } from "/util/guards"
 
@@ -61,7 +62,7 @@ const OptionCollapse = styled(Collapse)`
   }
 `
 const StyledButton = styled(ButtonWithPaddingAndMargin)`
-  color: white;
+  color: ${cssRole("textOnAccent")};
   margin-top: 16px;
   max-height: 3.5rem;
 `

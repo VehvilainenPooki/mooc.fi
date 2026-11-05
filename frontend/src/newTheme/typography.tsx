@@ -4,13 +4,14 @@ import { createTheme, responsiveFontSizes, Theme } from "@mui/material/styles"
 
 import { themeFontSize } from "../theme/util"
 import { bodyFont, headerFont } from "./fonts"
+import { cssRole } from "./roles"
 
 export const fontVariableClass = `${headerFont.variable} ${bodyFont.variable}`
 export const bodyFontDeclaration = bodyFont.style
 
 export const withTypography = (theme: Theme) => {
   const commonHeadingStyles: CSSProperties = {
-    color: theme.palette.common.brand.nearlyBlack,
+    color: cssRole("textHeading"),
     margin: 0,
     width: "100%",
     fontWeight: 700,

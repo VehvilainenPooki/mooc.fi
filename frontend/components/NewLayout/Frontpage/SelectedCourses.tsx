@@ -29,15 +29,17 @@ import {
   PopularCoursesDocument,
 } from "/graphql/generated"
 
-const CardHeader = styled("div")`
+const CardHeader = styled("div")(
+  ({ theme }) => `
   position: relative;
-  background-color: #ffad14;
+  background-color: ${theme.vars.palette.roles.surfaceHighlight};
   height: 52px;
   padding-left: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   overflow: hidden;
-`
+`,
+)
 
 const CardActions = styled("div")`
   display: flex;

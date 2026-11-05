@@ -1,9 +1,13 @@
 import { Button } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
-export const ReloadButton = styled(Button)`
-  background-color: white;
-  color: #c25450;
+import { getRoles } from "/src/newTheme/roles"
+
+export const ReloadButton = styled(Button)(
+  ({ theme }) => `
+  background-color: ${(theme.vars ?? theme).palette.background.paper};
+  color: ${getRoles(theme).danger};
   padding: 1rem;
   margin: auto;
-`
+`,
+)

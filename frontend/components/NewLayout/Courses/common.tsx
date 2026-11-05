@@ -35,34 +35,34 @@ export const courseColorSchemes: Record<
   string,
   PaletteColor[keyof PaletteColor]
 > = {
-  "cyber-security": newTheme.palette.crimson.dark2!,
-  programming: newTheme.palette.green.dark2!,
-  "pilvipohjaiset-websovellukset": newTheme.palette.blue.dark2!,
-  "tekoaly-ja-data": newTheme.palette.purple.dark2!,
-  other: newTheme.palette.gray.dark1!,
-  program: newTheme.palette.green.dark2, // dev
-  webdev: newTheme.palette.blue.dark2, // dev
+  "cyber-security": newTheme.vars.palette.roles.courseCyberSecurity,
+  programming: newTheme.vars.palette.roles.courseProgramming,
+  "pilvipohjaiset-websovellukset": newTheme.vars.palette.roles.courseCloud,
+  "tekoaly-ja-data": newTheme.vars.palette.roles.courseAi,
+  other: newTheme.vars.palette.roles.courseOther,
+  program: newTheme.vars.palette.roles.courseProgramming, // dev
+  webdev: newTheme.vars.palette.roles.courseCloud, // dev
 }
 
 export const tagColorSchemes: Record<string, PaletteColor[keyof PaletteColor]> =
   {
-    other: newTheme.palette.gray.dark1!,
-    difficulty: newTheme.palette.blue.dark1!,
-    module: newTheme.palette.purple.dark1!,
-    language: newTheme.palette.green.dark1!,
-    program: newTheme.palette.green.dark2, // dev
-    webdev: newTheme.palette.blue.dark2, // dev
+    other: newTheme.vars.palette.roles.tagOther,
+    difficulty: newTheme.vars.palette.roles.tagDifficulty,
+    module: newTheme.vars.palette.roles.tagModule,
+    language: newTheme.vars.palette.roles.tagLanguage,
+    program: newTheme.vars.palette.roles.courseProgramming, // dev
+    webdev: newTheme.vars.palette.roles.courseCloud, // dev
   }
 
 export const moduleColorSchemes: Record<
   string,
   PaletteColor[keyof PaletteColor]
 > = {
-  "cyber-security": newTheme.palette.crimson.dark3!,
-  programming: newTheme.palette.green.dark3!,
-  "pilvipohjaiset-websovellukset": newTheme.palette.blue.dark3!,
-  "tekoaly-ja-data": newTheme.palette.purple.dark3!,
-  other: newTheme.palette.gray.dark2!,
-  program: newTheme.palette.green.dark3, // dev
-  webdev: newTheme.palette.blue.dark3, // dev
+  "cyber-security": newTheme.vars.palette.roles.moduleCyberSecurity,
+  programming: newTheme.vars.palette.roles.moduleProgramming,
+  "pilvipohjaiset-websovellukset": newTheme.vars.palette.roles.moduleCloud,
+  "tekoaly-ja-data": newTheme.vars.palette.roles.moduleAi,
+  other: newTheme.vars.palette.roles.moduleOther,
+  program: newTheme.vars.palette.roles.moduleProgramming, // dev
+  webdev: newTheme.vars.palette.roles.moduleCloud, // dev
 }

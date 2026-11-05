@@ -36,7 +36,7 @@ const HeroRoot = styled("section")(
     }
     &::after {
       width: 100%;
-      background-color: ${theme.palette.common.grayscale.mediumDark};
+      background-color: ${theme.vars.palette.roles.separator};
       height: 1px;
       content: "";
       margin: 0 auto;
@@ -129,7 +129,7 @@ const HeroImageContainer = styled("div")(
     }
     ${theme.breakpoints.up("md")} {
       padding: 0;
-      background-color: ${theme.palette.common.grayscale.white};
+      background-color: ${theme.vars.palette.background.paper};
       bottom: 0;
       position: absolute;
       right: 0;
@@ -168,13 +168,13 @@ const HeroContentContainer = styled("div")(
   }
 
   .hero__black & {
-    background-color: ${theme.palette.common.grayscale.black};
+    background-color: ${theme.vars.palette.roles.surfaceInverse};
   }
   .hero__blue & {
-    background-color: ${theme.palette.common.brand.main};
+    background-color: ${theme.vars.palette.roles.accent};
   }
   .hero__white & {
-    background-color: ${theme.palette.common.grayscale.white};
+    background-color: ${theme.vars.palette.background.paper};
     ${theme.breakpoints.up("lg")} {
       padding: 40px 24px 40px 0;
     }
@@ -289,13 +289,13 @@ const HeroSpacer = styled("div")(
     }
   }
   .hero__black & {
-    background-color: ${theme.palette.common.grayscale.black};
+    background-color: ${theme.vars.palette.roles.surfaceInverse};
   }
   .hero__blue & {
-    background-color: ${theme.palette.common.brand.main};
+    background-color: ${theme.vars.palette.roles.accent};
   }
   .hero__white & {
-    background-color: ${theme.palette.common.grayscale.white};
+    background-color: ${theme.vars.palette.background.paper};
   }
 `,
 )
@@ -325,13 +325,13 @@ const HeroTitle = styled(Typography)(
     }
 
     .hero__blue & {
-      color: ${theme.palette.common.grayscale.white};
+      color: ${theme.vars.palette.roles.textOnAccent};
     }
     .hero__black & {
-      color: ${theme.palette.common.grayscale.white};
+      color: ${theme.vars.palette.roles.textOnInverse};
     }
     .hero__white & {
-      color: ${theme.palette.common.grayscale.black};
+      color: ${theme.vars.palette.roles.text};
     }
 
     .hero__front_page & {
@@ -360,13 +360,13 @@ const HeroDescription = styled("p")(
   padding: 0;
   position: relative;
   .hero__blue & {
-    color: ${theme.palette.common.grayscale.white};
+    color: ${theme.vars.palette.roles.textOnAccent};
   }
   .hero__black & {
-    color: ${theme.palette.common.grayscale.white};
+    color: ${theme.vars.palette.roles.textOnInverse};
   }
   .hero__white & {
-    color: ${theme.palette.common.grayscale.black};
+    color: ${theme.vars.palette.roles.text};
   }
 
   ${theme.breakpoints.up("xl")} {

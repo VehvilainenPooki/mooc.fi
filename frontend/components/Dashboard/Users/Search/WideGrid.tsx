@@ -20,6 +20,7 @@ import Pagination from "./Pagination"
 import UserSearchContext from "/contexts/UserSearchContext"
 import useIsOld from "/hooks/useIsOld"
 import { useTranslator } from "/hooks/useTranslator"
+import { cssRole } from "/src/newTheme/roles"
 import UsersTranslations from "/translations/users"
 
 const TableWrapper = styled("div")`
@@ -27,8 +28,8 @@ const TableWrapper = styled("div")`
 `
 
 const StyledTableCell = styled(TableCell)`
-  background-color: black;
-  color: white;
+  background-color: ${cssRole("surfaceInverse")};
+  color: ${cssRole("textOnInverse")};
 `
 
 const StyledPaper = styled(Paper)`

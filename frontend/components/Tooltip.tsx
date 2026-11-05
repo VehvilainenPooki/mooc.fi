@@ -4,27 +4,29 @@ import { PropsOf } from "@emotion/react"
 import InfoIcon from "@mui/icons-material/Info"
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined"
 import { Typography, TypographyProps } from "@mui/material"
-import { css, styled } from "@mui/material/styles"
+import { css, styled, Theme } from "@mui/material/styles"
 import MUITooltip, { tooltipClasses, TooltipProps } from "@mui/material/Tooltip"
+
+import { getRoles } from "/src/newTheme/roles"
 
 const Tooltip = styled(({ className, ...props }: TooltipProps) => (
   <MUITooltip {...props} classes={{ popper: className }} />
 ))(
   ({ theme }) => `
   & .${tooltipClasses.tooltip} {
-    background-color: #f5f5f9;
-    color: rgba(0, 0, 0, 0.87);
+    background-color: ${getRoles(theme).tooltipSurface};
+    color: ${(theme.vars ?? theme).palette.text.primary};
     max-width: 300px;
     font-size: ${theme.typography.pxToRem(12)};
-    border: 1px solid #dadde9;
+    border: 1px solid ${getRoles(theme).tooltipBorder};
     cursor: pointer;
   }
 `,
 ) as typeof MUITooltip
 
-const IconStyle = css`
-  --icon-color: #a0a0ff;
-  --icon-hover-color: #6060ff;
+const IconStyle = (theme: Theme) => css`
+  --icon-color: ${getRoles(theme).tooltipIcon};
+  --icon-hover-color: ${getRoles(theme).tooltipIconHover};
 
   cursor: help;
   transition: all 0.2s ease-in-out;
@@ -44,8 +46,8 @@ const InfoTooltipBase = styled(Tooltip)`
 const InfoOutlined = styled(InfoOutlinedIcon, {
   shouldForwardProp: (prop) => prop !== "iconClor" && prop !== "hoverColor",
 })<{ iconColor?: string; hoverColor?: string }>(
-  ({ iconColor, hoverColor }) => `
-  ${IconStyle.styles}
+  ({ theme, iconColor, hoverColor }) => `
+  ${IconStyle(theme).styles}
   ${iconColor ? `--icon-color: ${iconColor};` : ""}
   ${hoverColor ? `--icon-hover-color: ${hoverColor};` : ""}
 `,
@@ -54,8 +56,8 @@ const InfoOutlined = styled(InfoOutlinedIcon, {
 const Info = styled(InfoIcon, {
   shouldForwardProp: (prop) => prop !== "iconColor" && prop !== "hoverColor",
 })<{ iconColor?: string; hoverColor?: string }>(
-  ({ iconColor, hoverColor }) => `
-  ${IconStyle.styles}
+  ({ theme, iconColor, hoverColor }) => `
+  ${IconStyle(theme).styles}
   ${iconColor ? `--icon-color: ${iconColor};` : ""}
   ${hoverColor ? `--icon-hover-color: ${hoverColor};` : ""}
 `,

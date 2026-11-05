@@ -42,7 +42,7 @@ const GeneralListRoot = styled("ul")(
     }
 
     li {
-      background-color: ${theme.palette.common.grayscale.backgroundBox};
+      background-color: ${theme.vars.palette.roles.surfaceSunken};
       width: 100%;
       height: auto;
     }

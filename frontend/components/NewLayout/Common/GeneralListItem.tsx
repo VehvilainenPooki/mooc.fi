@@ -19,7 +19,7 @@ const ListItemContainer = styled("article")`
 const ListItemMeta = styled("span")(
   ({ theme }) => `
   ${fontSize(12, 14)}
-  color: ${theme.palette.common.grayscale.dark};
+  color: ${theme.vars.palette.roles.textMuted};
   letter-spacing: -0.1px;
   text-transform: uppercase;
   margin: 9px 0;
@@ -49,11 +49,11 @@ const ListItemLink = styled(Link)(
   &:hover,
   &:focus {
     ${ListItemType} span {
-      background-color: ${theme.palette.common.brand.main};
+      background-color: ${theme.vars.palette.roles.accent};
     }
 
     ${ListItemTitle} {
-      color: ${theme.palette.common.brand.main};
+      color: ${theme.vars.palette.roles.accent};
       text-decoration: underline;
     }
   }
@@ -100,7 +100,7 @@ const ListItemImageContainer = styled("div")(
   }
 
   .list-item__style-grid & {
-    border: 1px solid ${theme.palette.common.grayscale.light};
+    border: 1px solid ${theme.vars.palette.roles.borderSubtle};
     max-width: 100%;
 
     ${theme.breakpoints.down("sm")} {
@@ -112,7 +112,8 @@ const ListItemImageContainer = styled("div")(
 `,
 )
 
-const ListItemImage = styled(Image)`
+const ListItemImage = styled(Image)(
+  ({ theme }) => `
   bottom: 0;
   height: 100%;
   left: 0;
@@ -122,12 +123,13 @@ const ListItemImage = styled(Image)`
   top: 0;
   width: 100%;
 
-  background-color: #ececec;
-`
+  background-color: ${theme.vars.palette.roles.imagePlaceholder};
+`,
+)
 
 const ListItemType = styled("div")(
   ({ theme }) => `
-  background-color: ${theme.palette.common.grayscale.backgroundBox};
+  background-color: ${theme.vars.palette.roles.surfaceSunken};
   padding-top: 16px;
   z-index: 10;
 
@@ -142,8 +144,8 @@ const ListItemType = styled("div")(
   .list-item__type__major {
     ${fontSize(12, 14)}
     font-weight: 700;
-    background-color: ${theme.palette.common.grayscale.black};
-    color: ${theme.palette.common.grayscale.white};
+    background-color: ${theme.vars.palette.roles.surfaceInverse};
+    color: ${theme.vars.palette.roles.textOnInverse};
     letter-spacing: -0.1px;
     padding: 5px 8px;
     text-transform: uppercase;
@@ -157,8 +159,8 @@ const ListItemType = styled("div")(
 
   .list-item__type__sub {
     ${fontSize(12, 14)}
-    background-color: ${theme.palette.common.grayscale.black};
-    color: ${theme.palette.common.grayscale.white};
+    background-color: ${theme.vars.palette.roles.surfaceInverse};
+    color: ${theme.vars.palette.roles.textOnInverse};
     letter-spacing: -0.1px;
     padding: 5px 8px;
     margin-left: -8px;
@@ -168,7 +170,7 @@ const ListItemType = styled("div")(
 
 const ListItemTextContainer = styled("div")(
   ({ theme }) => `
-  background-color: ${theme.palette.common.grayscale.backgroundBox};
+  background-color: ${theme.vars.palette.roles.surfaceSunken};
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -198,7 +200,7 @@ const ListItemTitle = styled("h3")(
   ({ theme }) => `
   ${fontSize(18, 22)}
   font-weight: 700;
-  color: ${theme.palette.common.brand.nearlyBlack};
+  color: ${theme.vars.palette.roles.textHeading};
   letter-spacing: -0.45px;
   margin-bottom: 8px;
   margin-top: 0;
@@ -220,7 +222,7 @@ const ListItemTitle = styled("h3")(
 const ListItemDescription = styled("p")(
   ({ theme }) => `
   ${fontSize(15, 20)}
-  color: ${theme.palette.common.grayscale.dark};
+  color: ${theme.vars.palette.roles.textMuted};
   display: none;
   letter-spacing: -0.09px;
   margin: 0;

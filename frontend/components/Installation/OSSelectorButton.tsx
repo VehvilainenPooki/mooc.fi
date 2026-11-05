@@ -4,6 +4,7 @@ import { ButtonBase, Typography, type SvgIconProps } from "@mui/material"
 import { css, styled } from "@mui/material/styles"
 
 import UserOSContext from "/contexts/UserOSContext"
+import { cssRole } from "/src/newTheme/roles"
 import { UserOSType } from "/util/getUserOS"
 
 interface ButtonProps {
@@ -14,7 +15,8 @@ const StyledButtonBase = styled(ButtonBase)<ButtonProps>`
   margin: 1em;
   display: flex;
   flex-direction: column;
-  ${(props) => props.selected && `border-bottom: 4px solid #00D2FF;`}
+  ${(props) =>
+    props.selected && `border-bottom: 4px solid ${cssRole("accentBright")};`}
   padding: 1 em;
 `
 

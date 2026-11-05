@@ -12,7 +12,7 @@ import { fontSize } from "/src/theme/util"
 
 const LinkBoxContainer = styled("article")(
   ({ theme }) => `
-  background-color: ${theme.palette.common.grayscale.backgroundBox};
+  background-color: ${theme.vars.palette.roles.surfaceSunken};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ const LinkBoxContainer = styled("article")(
 
 const LinkBoxContainerNonClickable = styled("article")(
   ({ theme }) => `
-  background-color: ${theme.palette.common.grayscale.backgroundBox};
+  background-color: ${theme.vars.palette.roles.surfaceSunken};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@ const LinkBoxTitle = styled(Typography)(
   ({ theme }) => `
   ${fontSize(21, 28)}
   font-weight: 700;
-  color: ${theme.palette.common.brand.nearlyBlack};
+  color: ${theme.vars.palette.roles.textHeading};
   letter-spacing: -0.42px;
   hyphens: auto;
   margin: 0 0 16px;
@@ -100,7 +100,7 @@ const LinkBoxTitle = styled(Typography)(
 const LinkBoxDescription = styled("p")(
   ({ theme }) => `
   ${fontSize(15, 22)};
-  color: ${theme.palette.common.grayscale.black};
+  color: ${theme.vars.palette.roles.text};
   margin: 0;
 
   ${theme.breakpoints.up("desktop")} {
@@ -132,6 +132,7 @@ const FlagBackground = styled(FullCoverTextBackground)`
   position: relative;
   height: 100%;
   padding: 0 1rem;
+  /* Ukrainian flag colors, kept literal on purpose */
   background-color: #ffd700;
   z-index: 2;
   background-image: linear-gradient(90deg, transparent 20px, white 20px),
